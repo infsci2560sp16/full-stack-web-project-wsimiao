@@ -1,0 +1,475 @@
+<!doctype html>
+<html>
+<head>
+    <title>Registration</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/styletest.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+  <div class="header">
+<!--                 --------------------->
+    <div class="nav-customer">
+    <div class="nav-container">
+
+      <div class="welcome-l">
+      <p class="pd">Welcome to SkinStore!</p>
+    </div>
+
+    <div class="welcome-r">
+      <ul class="nav-customer-list pd">
+        <li><a href="contact.php"><i class="fa fa-info-circle"></i> Contact</a></li>
+        <li><a href="my-love.php"><i class="fa fa-heart"></i> Favoriate</a></li>
+        <li><a href="my-orders.php"><i class="fa fa-cube"></i>  Order</a></li>
+        <li><a href="login.php"><i class="fa fa-user"></i> Login/SignUp</a></li>
+      </ul>
+    </div>
+
+
+    </div>
+
+  </div>
+<!--                 --------------------->
+  <div class="nav-search">
+    <div class="nav-search-container">
+      <div class="logo">
+        <img src="images/logo.jpg" />
+      </div>
+      <div class="search">
+
+        <form>
+
+          <input type="text" id="search-bar" placeholder="Search" />
+          <button type="submit" class="button" id="search-button"><i class="fa fa-search"></i></button>
+
+        </form>
+
+      </div>
+      <div class="cart">
+        <button id="cart-btn" ><i class="fa fa-shopping-cart"></i> Shopping Cart</a>
+      </div>
+
+  </div>
+</div>
+<!--                 ---------------------->
+
+
+  <div class="nav-category">
+    <div class="nav-category-container">
+
+      <div class="quick-link">
+        <strong>Quick Link</strong>
+      </div>
+      <div class="links">
+        <br />
+        <ul class="link-list">
+          <li><a href="newarrived.php">New Arrived</a></li>
+          <li><a href="bestseller.php">Best Seller</a></li>
+          <li><a href="valuesets.php">Value Sets</a></li>
+          <li><a href="weeklyspecial.php">Weekly Specials</a></li>
+        </ul>
+      </div>
+
+
+
+      <!--
+
+      <div class="cat-details" id="cat-new">
+        <ul class="cats pd">
+          <li id="menu-makeup" ><a href="makeup.php">MAKEUP</a></li>
+          <script src="js/slideshow.js"></script>
+          <li><a href="skincare.php">SKIN CARE</a></li>
+          <li><a href="fragrance.php">FRAGRANCE</a></li>
+          <li><a href="bathbody.php">BATH&BODY</a></li>
+          <li><a href="hair.php">HAIR</a></li>
+        </ul>
+      </div>
+    -->
+<!--The menu div for MakeUp and the content-drop------------>
+      <div class="menu-div">
+        <a href="makeup.php">MAKEUP</a>
+      </div>
+
+      <div class="content-drop" id="content-drop-makeup">
+        <div class="content-drop-left">
+          <h4>Face Makeup</h4>
+          <ul class="content-drop-list">
+            <li>Foundation</li>
+            <li>BB Cream && CC Cream</li>
+            <li>Face Powder</li>
+            <li>Concealer</li>
+            <li>Blush</li>
+            <li>Highlighter</li>
+            <li>Makeup Remover</li>
+          </ul>
+        </div>
+        <div class="content-drop-middle">
+          <h4>Eye Makeup</h4>
+          <ul class="content-drop-list">
+            <li>Eyeshadow Palette & Eye Sets</li>
+            <li>Mascara</li>
+            <li>Eyeliner</li>
+            <li>Eyeshadow</li>
+            <li>Eyebrows</li>
+            <li>Eye Makeup Remover</li>
+          </ul>
+        </div>
+        <div class="content-drop-right">
+          <h4>Lip</h4>
+          <ul class="content-drop-list">
+            <li>Lipstick</li>
+            <li>Lip Stain</li>
+            <li>Lip Gloss</li>
+            <li>Lip Plumper</li>
+            <li>Lip Balm & Treatment</li>
+            <li>Lip Sets</li>
+          </ul>
+        </div>
+
+      </div>
+      <!--the Makeup div end!---------------------------->
+      <!--The menu div for MakeUp and the content-drop------------>
+            <div class="menu-div">
+              <a href="makeup.php">SKINCARE</a>
+            </div>
+
+            <div class="content-drop" id="content-drop-makeup">
+              <div class="content-drop-left">
+                <h4>Face Makeup</h4>
+                <ul class="content-drop-list">
+                  <li>Foundation</li>
+                  <li>BB Cream && CC Cream</li>
+                  <li>Face Powder</li>
+                  <li>Concealer</li>
+                  <li>Blush</li>
+                  <li>Highlighter</li>
+                  <li>Makeup Remover</li>
+                </ul>
+              </div>
+              <div class="content-drop-middle">
+                <h4>Eye Makeup</h4>
+                <ul class="content-drop-list">
+                  <li>Eyeshadow Palette & Eye Sets</li>
+                  <li>Mascara</li>
+                  <li>Eyeliner</li>
+                  <li>Eyeshadow</li>
+                  <li>Eyebrows</li>
+                  <li>Eye Makeup Remover</li>
+                </ul>
+              </div>
+              <div class="content-drop-right">
+                <h4>Lip</h4>
+                <ul class="content-drop-list">
+                  <li>Lipstick</li>
+                  <li>Lip Stain</li>
+                  <li>Lip Gloss</li>
+                  <li>Lip Plumper</li>
+                  <li>Lip Balm & Treatment</li>
+                  <li>Lip Sets</li>
+                </ul>
+              </div>
+
+            </div>
+      <!--the Makeup div end!---------------------------->
+      <!--The menu div for MakeUp and the content-drop------------>
+            <div class="menu-div">
+              <a href="makeup.php">FRAGRANCE</a>
+            </div>
+
+            <div class="content-drop" id="content-drop-makeup">
+              <div class="content-drop-left">
+                <h4>Face Makeup</h4>
+                <ul class="content-drop-list">
+                  <li>Foundation</li>
+                  <li>BB Cream && CC Cream</li>
+                  <li>Face Powder</li>
+                  <li>Concealer</li>
+                  <li>Blush</li>
+                  <li>Highlighter</li>
+                  <li>Makeup Remover</li>
+                </ul>
+              </div>
+              <div class="content-drop-middle">
+                <h4>Eye Makeup</h4>
+                <ul class="content-drop-list">
+                  <li>Eyeshadow Palette & Eye Sets</li>
+                  <li>Mascara</li>
+                  <li>Eyeliner</li>
+                  <li>Eyeshadow</li>
+                  <li>Eyebrows</li>
+                  <li>Eye Makeup Remover</li>
+                </ul>
+              </div>
+              <div class="content-drop-right">
+                <h4>Lip</h4>
+                <ul class="content-drop-list">
+                  <li>Lipstick</li>
+                  <li>Lip Stain</li>
+                  <li>Lip Gloss</li>
+                  <li>Lip Plumper</li>
+                  <li>Lip Balm & Treatment</li>
+                  <li>Lip Sets</li>
+                </ul>
+              </div>
+
+            </div>
+       <!--the Makeup div end!---------------------------->
+       <!--The menu div for MakeUp and the content-drop------------>
+             <div class="menu-div">
+               <a href="makeup.php">BATH&BODY</a>
+             </div>
+
+             <div class="content-drop" id="content-drop-makeup">
+               <div class="content-drop-left">
+                 <h4>Face Makeup</h4>
+                 <ul class="content-drop-list">
+                   <li>Foundation</li>
+                   <li>BB Cream && CC Cream</li>
+                   <li>Face Powder</li>
+                   <li>Concealer</li>
+                   <li>Blush</li>
+                   <li>Highlighter</li>
+                   <li>Makeup Remover</li>
+                 </ul>
+               </div>
+               <div class="content-drop-middle">
+                 <h4>Eye Makeup</h4>
+                 <ul class="content-drop-list">
+                   <li>Eyeshadow Palette & Eye Sets</li>
+                   <li>Mascara</li>
+                   <li>Eyeliner</li>
+                   <li>Eyeshadow</li>
+                   <li>Eyebrows</li>
+                   <li>Eye Makeup Remover</li>
+                 </ul>
+               </div>
+               <div class="content-drop-right">
+                 <h4>Lip</h4>
+                 <ul class="content-drop-list">
+                   <li>Lipstick</li>
+                   <li>Lip Stain</li>
+                   <li>Lip Gloss</li>
+                   <li>Lip Plumper</li>
+                   <li>Lip Balm & Treatment</li>
+                   <li>Lip Sets</li>
+                 </ul>
+               </div>
+
+             </div>
+      <!--the Makeup div end!---------------------------->
+      <!--The menu div for MakeUp and the content-drop------------>
+            <div class="menu-div">
+              <a href="makeup.php">HAIR</a>
+            </div>
+
+            <div class="content-drop" id="content-drop-makeup">
+              <div class="content-drop-left">
+                <h4>Face Makeup</h4>
+                <ul class="content-drop-list">
+                  <li>Foundation</li>
+                  <li>BB Cream && CC Cream</li>
+                  <li>Face Powder</li>
+                  <li>Concealer</li>
+                  <li>Blush</li>
+                  <li>Highlighter</li>
+                  <li>Makeup Remover</li>
+                </ul>
+              </div>
+              <div class="content-drop-middle">
+                <h4>Eye Makeup</h4>
+                <ul class="content-drop-list">
+                  <li>Eyeshadow Palette & Eye Sets</li>
+                  <li>Mascara</li>
+                  <li>Eyeliner</li>
+                  <li>Eyeshadow</li>
+                  <li>Eyebrows</li>
+                  <li>Eye Makeup Remover</li>
+                </ul>
+              </div>
+              <div class="content-drop-right">
+                <h4>Lip</h4>
+                <ul class="content-drop-list">
+                  <li>Lipstick</li>
+                  <li>Lip Stain</li>
+                  <li>Lip Gloss</li>
+                  <li>Lip Plumper</li>
+                  <li>Lip Balm & Treatment</li>
+                  <li>Lip Sets</li>
+                </ul>
+              </div>
+
+            </div>
+            <!--the Makeup div end!---------------------------->
+
+
+    </div>
+  </div>
+
+</div><!--The end of Header------------------------------------------>
+
+<!--Start of Login Page--->
+<div class="regis-page">
+  <div class="regis-container">
+    <span id="regis-title">Account Registration</span>
+    <div class="regis-content">
+
+      <div class="regis-content-m">
+
+        <span class="regis-sub-title">Your Information</span>
+        <span class="regis-sub-title" style="font-size:15px; margin:20px 0 20px 0">Just fill out the form below to save account information and speed up the checkout process</span>
+          <div>
+          <form id="registration-form">
+            <table class="table-form">
+              <tbody>
+                <tr id="firstrow">
+                  <th scope="row">
+                    <label for="registration-firstname">First Name</label>
+                  </th>
+                  <td>
+                    <input id="registration-firstname" type="text" vaule="">
+                  </td>
+                  <td class="error-message" id="error-firstname">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="registration-lastname">Last Name</label>
+                  </th>
+                  <td>
+                    <input id="registration-lastname" type="text" vaule="">
+                  </td>
+                  <td class="error-message" id="error-lastname">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="registration-email">Email</label>
+                  </th>
+                  <td>
+                    <input id="registration-email" type="email" vaule="">
+                  </td>
+                  <td class="error-message" id="error-email">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="registration-con-email">Confirm Email</label>
+                  </th>
+                  <td>
+                    <input id="registration-con-email" type="email" vaule="">
+                  </td>
+                  <td class="error-message" id="error-con-email">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="registration-password">Password</label>
+                  </th>
+                  <td>
+                    <input id="registration-password" type="password" vaule="">
+                  </td>
+                  <td class="error-message" id="error-pass">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <label for="registration-con-password">Confirm Password</label>
+                  </th>
+                  <td>
+                    <input id="registration-con-password" type="password" vaule="">
+                  </td>
+                  <td class="error-message" id="error-con-pass">
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    &nbsp;
+                  </th>
+                  <td>
+                    <input id="registration-btn" type="submit" vaule="Register">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+          </div>
+
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="js/formvalidation.js"></script>
+
+<!--
+<script>
+$("#registration-form").submit(function(event){
+
+  event.preventDefault();
+
+
+  function isValidEmailAddress(emailAddress) {
+  var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+  return pattern.test(emailAddress);
+  };
+  var validfirstname=false;
+  var validlastname=false;
+  if($("#registration-firstname").val()==""){
+    $("#error-firstname").html("Please enter valid first name");
+  }else{
+    validfirstname=true;
+  }
+
+  if($("#registration-lastname").val()==""){
+    $("#error-lastname").html("Please enter valid last name");
+  }else{
+    validlastname=true;
+  }
+  var validemail=false;
+  if(!isValidEmailAddress($("#registration-email").val())){
+    $("#error-email").html("Please enter valid email");
+  }else{
+    validemail=true;
+  }
+
+  var validconemail=false;
+  if(validemail && $("#registration-con-email").val()==$("#registration-email").val()){
+    validconemail=true;
+  }else{
+    $("#error-con-email").html("The two email adress entered are not same!");
+  }
+
+  var passwordcon=false;
+  if($("#registration-password").val()==$("#registration-con-password").val()&&$("#registration-password").val()!=""){
+    passwordcon=true;
+  }else{
+    $("#error-con-pass").html("Please enter password or the two passwords entered are not the same!");
+  }
+
+  if(validfirstname && validlastname && validemail && validconemail && passwordcon){
+    alert("success register!");
+  }
+
+
+
+});
+</script>
+
+-->
+
+</body>
+</html>
