@@ -12,4 +12,4 @@ function changeImage(){
 var intervalHandle = setInterval(changeImage,2000);
 slideshow.onclick=function(){
   clearInterval(intervalHandle);
-}
+};
