@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Skin Store</title>
+    <title>Item</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,10 +22,10 @@
 
     <div class="welcome-r">
       <ul class="nav-customer-list pd">
-        <li><a href="#"><i class="fa fa-info-circle"></i> Contact</a></li>
-        <li><a href="#"><i class="fa fa-heart"></i> Favoriate</a></li>
-        <li><a href="#"><i class="fa fa-cube"></i>  Order</a></li>
-        <li><a href="login.html"><i class="fa fa-user"></i> Login/SignUp</a></li>
+        <li><a href="contact.php"><i class="fa fa-info-circle"></i> Contact</a></li>
+        <li><a href="my-love.php"><i class="fa fa-heart"></i> Favoriate</a></li>
+        <li><a href="my-orders.php"><i class="fa fa-cube"></i>  Order</a></li>
+        <li><a href="login.php"><i class="fa fa-user"></i> Login/SignUp</a></li>
       </ul>
     </div>
 
@@ -33,7 +33,7 @@
     </div>
 
   </div>
-
+<!--                -->
   <div class="nav-search">
     <div class="nav-search-container">
       <div class="logo">
@@ -50,12 +50,12 @@
 
       </div>
       <div class="cart">
-        <button id="cart-btn" ><i class="fa fa-shopping-cart"></i>Shopping Cart</button>
+        <button id="cart-btn" ><i class="fa fa-shopping-cart"></i> Shopping Cart</button>
       </div>
 
   </div>
 </div>
-
+<!--                 -->
 
 
   <div class="nav-category">
@@ -64,6 +64,17 @@
       <div class="quick-link">
         <strong>Quick Link</strong>
       </div>
+      <div class="links">
+        <br />
+        <ul class="link-list">
+          <li><a href="newarrived.php">New Arrived</a></li>
+          <li><a href="bestseller.php">Best Seller</a></li>
+          <li><a href="valuesets.php">Value Sets</a></li>
+          <li><a href="weeklyspecial.php">Weekly Specials</a></li>
+        </ul>
+      </div>
+
+
 
       <!--
 
@@ -298,63 +309,57 @@
     </div>
   </div>
 
-</div>
-
-
-
-
-<div class="slide">
-  <div class="slide-container">
-    <div class="links-index">
-      <br />
-      <ul class="link-list">
-        <li><a href="newarrived.php">New Arrived</a></li>
-        <li><a href="bestseller.php">Best Seller</a></li>
-        <li><a href="valuesets.php">Value Sets</a></li>
-        <li><a href="weeklyspecial.php">Weekly Specials</a></li>
+</div><!--The end of Header-->
+<div class="item-page">
+  <div class="item-container">
+    <div class="item-nav">
+      <ul>
+        <li><a href="#">makeup></a></li>
+        <li><a href="#">face makeup></a></li>
+        <li><a href="#">foundation</a></li>
       </ul>
     </div>
 
-    <div class="slide-show">
-      <img src="images/slide1.jpg" id="slideshow" alt="">
-      <script src="js/slideshow.js"></script>
+    <div class="item-image">
+      <div class="item-image-container">
+        <img src="images/a.jpg" alt="">
+      </div>
     </div>
+    <div class="item-detail">
+      <div class="item-info-container">
+        <div class="item-info-primary">
+          <span class="item-prd-title">Giorgio Armani</span><br />
+          <span>Luminous Silk Foundation</span>
+          <span style="font-size:0.7em">ITEM 1359553 . SIZE 1oz</span>
 
-    <div class="hot-deal">
+
+        </div>
+        <div class="item-info-price">
+          $62
+        </div>
+        <div class="item-info-quantity">
+          <label class="quantity-label">QTY</label>
+          <select class="item-info-quan">
+            <option selected value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="item-info-action">
+          <button type="button" class="item-info-btn">ADD TO CART</button>
+        </div>
+      </div>
     </div>
-
 
 
   </div>
 </div>
 
 
-
-<div class="promo-bar">
-  <div class="promo-bar-container">
-    <div class="left-two">
-      <a href="item.html"><img src="images/1.jpg" id ="image1" alt=""></a>
-      <a href="item.html"><img src="images/1.jpg" id ="image2" alt=""></a>
-    </div>
-    <div class="middle-one">
-      <a href="item.html"><img src="images/a.jpg" id ="image3" alt=""></a>
-    </div>
-    <div class="right-two">
-      <a href="item.html"><img src="images/1.jpg" id ="image4" alt=""></a>
-      <a href="item.html"><img src="images/1.jpg" id ="image5" alt=""></a>
-    </div>
-  </div>
-</div>
-
-
-
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
 
 
 </body>
-
 </html>
