@@ -11,11 +11,6 @@ import spark.template.freemarker.FreeMarkerEngine;
 import spark.ModelAndView;
 import static spark.Spark.get;
 
-import static javax.measure.unit.SI.KILOGRAM;
-import javax.measure.quantity.Mass;
-import org.jscience.physics.model.RelativisticModel;
-import org.jscience.physics.amount.Amount;
-
 import com.heroku.sdk.jdbc.DatabaseUrl;
 
 public class Main {
@@ -27,12 +22,12 @@ public class Main {
 
     get("/hello", (req, res) -> "Hello World");
 
-    // get("/", (request, response) -> {
-    //         Map<String, Object> attributes = new HashMap<>();
-    //         attributes.put("message", "Hello World!");
+    get("/", (request, response) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            attributes.put("message", "Hello World!!!");
 
-    //         return new ModelAndView(attributes, "index.ftl");
-    //     }, new FreeMarkerEngine());
+            return new ModelAndView(attributes, "index.ftl");
+        }, new FreeMarkerEngine());
 
     get("/db", (req, res) -> {
       Connection connection = null;
