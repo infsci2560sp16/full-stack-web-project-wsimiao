@@ -1,0 +1,769 @@
+/* Rules for Google icon sizes: */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; } /* Default */
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    margin:0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.top-bar {
+    width:100%;
+    height:40px;
+    background-color: rgb(226, 231, 228);
+    margin:0;
+    position: relative;
+}
+
+.fixed-width-1 {
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color: rgb(231, 208, 152);
+}
+
+.welcome{
+    float:left;
+}
+
+.chinese-version-area{
+    width:200px;
+    height:inherit;
+    font-size: 16px;
+    border: none;
+    float:left;
+    margin: 10px 0 0 10px;
+}
+
+.chinese-version-area:hover{
+    color:red;
+}
+
+.top-bar-li{
+    margin:0;
+    float:left;
+    height:inherit;
+    width:500px;
+    position: relative;
+    margin-left: 440px;
+}
+
+.nav-top-bar{
+    width: inherit;
+    height: inherit;
+    position: relative;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.nav-top-bar li{
+    float:left;
+    list-style: none;
+    position: relative;
+    padding-right: 20px;
+}
+
+.nav-top-bar i{
+    margin:0;
+    margin-right: 3px;
+}
+
+.top-bar-li li:hover{
+    color:red;
+}
+
+.logo-search-bar{
+    width:100%;
+    height:80px;
+    margin:0;
+    background-color: rgb(174, 207, 186);
+    float:left;
+}
+
+.fixed-width-2{
+    width:1200px;
+    height:100%;
+    background-color: rgb(231, 254, 167);
+    margin:0 auto;
+    position: relative;
+}
+
+.main-logo-area{
+    height:80px;
+    width:240px;
+    background-color:rgb(124, 177, 207);
+    float:left;
+}
+
+.main-logo {
+    padding:0;
+}
+
+.search-box-area{
+    height:80px;
+    width:720px;
+    background-color: rgb(200, 173, 233);
+    float:left;
+    position:relative;
+}
+
+.search-bar-main{
+    height:40px;
+    width:520px;
+    float:left;
+    border: 1px solid rgb(246, 204, 76);
+    font-size: 150%;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.search-button-main{
+    width:80px;
+    height:40px;
+    font-size: 30px;
+    float: left;
+    border: none;
+    background-color:rgb(246, 204, 76);
+    margin-top: 20px;
+}
+
+.shopping-cart-area{
+    width:240px;
+    height:80px;
+    float:left;
+    background-color:rgb(151, 230, 235);
+    text-align: center;
+}
+
+.shopping-cart-area span{
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.shopping-cart-button{
+    width:100px;
+    height:40px;
+    text-align: center;
+    border: none;
+    float: left;
+    margin: 20px 0 0 40px;
+    background-color: rgb(246, 204, 76);
+}
+
+.shopping-cart-button:hover{
+    color:red;
+}
+
+.category-bar {
+    width:100%;
+    height:40px;
+    background-color: rgb(226, 231, 228);
+    margin:0;
+    float: left;
+}
+
+.fixed-width-3 {
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color: rgb(231, 208, 152);
+}
+
+.all-category-area{
+    height:100%;
+    width:240px;
+    background-color:rgb(124, 177, 207);
+    float:left;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100%;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.seperate-category-area{
+    height:100%;
+    width:720px;
+    background-color:rgb(188, 240, 152);
+    float:left;
+    position:relative;
+}
+
+.shipping-info-area{
+    width:240px;
+    height:100%;
+    float:left;
+    background-color:rgb(242, 181, 162);
+    text-align: center;
+}
+
+.shipping-info-area i{
+    padding-top: 10px;
+    float:left;
+    padding-left: 10px;
+}
+
+.shipping-info-area span{
+    float: left;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.seperate-category-ul{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.seperate-category-ul li{
+    float:left;
+    list-style: none;
+    padding-right: 45px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.seperate-category-ul li:hover{
+    color:red;
+}
+
+.content-main-area {
+    width:100%;
+    height:480px;
+    background-color:rgb(245, 205, 255);
+    margin:0;
+    float:left;
+}
+
+.fixed-width-4{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color: rgb(250, 255, 163);
+    position: relative;
+}
+
+#main-img-area{
+    width:960px;
+    height:inherit;
+    float: left;
+    background-color: rgb(246, 209, 205);
+}
+
+#mainImg{
+    width:960px;
+    height:inherit;
+}
+
+.dropdown-categories-area{
+    width:240px;
+    height:inherit;
+    margin:0;
+    float: left;
+    background-color: rgb(144, 193, 138);
+}
+
+.dropdown-all-content{
+    float:left;
+    width:240px;
+    height: auto;
+    border-bottom: 1px solid rgb(17, 48, 199);
+}
+
+.dropdown-all-content-ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-all-content-ul li{
+    padding-left: 5px;
+    padding-bottom: 1px;
+}
+
+.dropdown-categories-area p{
+    font-weight: bold;
+    padding-left: 5px;
+    box-sizing: border-box;
+    margin:0;
+    padding-top: 2px;
+    padding-bottom: 5px;
+}
+
+.dropdown-categories-area p:hover{
+    color:red;
+}
+
+.sub-dropdown-all-content{
+    height:480px;
+    width:720px;
+    float:left;
+    left:240px;
+    background-color: rgb(130, 233, 255);
+    overflow: hidden;
+    z-index: 7;
+    display:none;
+    position:absolute;
+}
+.sub-dropdown-fixed-width{
+    width:720px;
+    position: relative;
+}
+
+.sub-dropdown-all-cat{
+    width:720px;
+    height:360px;
+    float: left;
+    background-color:rgb(184, 114, 66);
+    opacity: 0.8;
+}
+
+.sub-cat-group{
+    width:200px;
+    height:240px;
+    float:left;
+    background-color: rgb(236, 208, 50);
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.sub-cat-ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-cat-ul li{
+    padding-left: 5px;
+    padding-bottom: 1px;
+}
+
+.dropdown-all-content:hover + .sub-dropdown-all-content{
+    display: block;
+}
+
+.sub-dropdown-all-content:hover {
+    display: block;
+}
+
+.blank-div-bar {
+    width:100%;
+    height:40px;
+    background-color:rgb(112, 250, 153);
+    position: relative;
+    float: left;
+}
+
+.featured-items-bar {
+    width:100%;
+    height:400px;
+    background-color:rgb(184, 132, 205);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-5{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color: rgb(172, 158, 149);
+    position: relative;
+}
+
+.chillibuy-info-bar {
+    width:100%;
+    height:160px;
+    background-color:rgb(184, 132, 205);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-6{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(9, 9, 9);
+    position: relative;
+}
+
+.featured-items-img{
+    width:400px;
+    height:200px;
+    float:left;
+    background-color: rgb(254, 205, 103);
+    box-sizing: border-box;
+    border: solid white 1px;
+}
+
+.title-div-bar{
+    width:100%;
+    height:40px;
+    background-color:rgb(143, 230, 245);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-7{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(241, 202, 136);
+    position: relative;
+}
+
+.fixed-width-8{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(236, 115, 63);
+    position: relative;
+}
+
+.sub-cat-img-bar{
+    width:100%;
+    height:480px;
+    background-color:rgb(184, 132, 205);
+    position: relative;
+    float: left;
+}
+
+.sub-cat-img-big{
+    width:400px;
+    height:240px;
+    float: left;
+    margin: 0;
+    position: relative;
+    background-color: rgb(228, 143, 185);
+}
+.sub-cat-img-small{
+    width:200px;
+    height:240px;
+    float: left;
+    margin: 0;
+    position: relative;
+    background-color: rgb(62, 134, 255);
+    box-sizing: border-box;
+    border: solid white 1px;
+}
+
+/*******************loginpage.css**********************/
+/*******************loginpage.css**********************/
+/*******************loginpage.css**********************/
+/*******************loginpage.css**********************/
+/*******************loginpage.css**********************/
+/*******************loginpage.css**********************/
+
+
+
+.login-page-bar{
+    width:100%;
+    height:800px;
+    float: left;
+    margin: 0;
+    background-color: rgb(186, 218, 41);
+}
+
+.fixed-width-10{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color: rgb(250, 255, 163);
+    position: relative;
+}
+
+.chillibuy-info-bar {
+    width:100%;
+    height:160px;
+    background-color:rgb(184, 132, 205);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-6{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(9, 9, 9);
+    position: relative;
+}
+
+.new-customer-area{
+    width:50%;
+    height: 720px;
+    float: left;
+    background-color: rgb(228, 144, 210);
+}
+
+.customer-login-area{
+    width:50%;
+    height:720px;
+    float: left;
+    background-color: rgb(176, 230, 170);
+    position:relative;
+}
+
+.customer-login-area-title{
+    width:100%;
+    height: 80px;
+    background-color: rgb(116, 212, 215);
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+
+input#signin_main_button{
+    width:80px;
+    height:30px;
+    background-color: rgb(238, 213, 43);
+}
+
+.login-info-area{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(143, 207, 146);
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.register-area{
+    width: 100%;
+    height: 400px;
+    background-color:rgb(247, 227, 136);
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.register-ul{
+    padding-top: 30px;
+}
+
+.register-ul li{
+    list-style:disc;
+    padding-bottom: 3px;
+}
+
+#button-register{
+    width:80px;
+    height:30px;
+    background-color: rgb(238, 213, 43);
+}
+
+#button-register{
+    margin-top: 30px;
+}
+
+/*****************shoppingcart.css********************/
+/*****************shoppingcart.css********************/
+/*****************shoppingcart.css********************/
+/*****************shoppingcart.css********************/
+/*****************shoppingcart.css********************/
+/*****************shoppingcart.css********************/
+
+
+.blank-div-bar {
+    width:100%;
+    height:40px;
+    background-color:rgb(112, 250, 153);
+    position: relative;
+    float: left;
+}
+
+.chillibuy-info-bar {
+    width:100%;
+    height:160px;
+    background-color:rgb(184, 132, 205);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-6{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(9, 9, 9);
+    position: relative;
+}
+
+.title-div-bar{
+    width:100%;
+    height:40px;
+    background-color:rgb(143, 230, 245);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-7{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(241, 202, 136);
+    position: relative;
+}
+
+.shopping-cart-bar{
+    width:100%;
+    min-height:600px;
+    background-color:rgb(228, 252, 177);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-9{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(104, 233, 230);
+    position: relative;
+}
+
+.shopping-cart-div-left{
+    width:840px;
+    min-height:560px;
+    float: left;
+    position: relative;
+    background-color:rgb(223, 93, 66);
+}
+.shopping-cart-div-right{
+    width:360px;
+    min-height:560px;
+    float: left;
+    position: relative;
+    background-color:rgb(162, 139, 224);
+}
+
+#shopping-item-container{
+    background-color: rgb(198, 21, 47);
+    float: left;
+}
+
+/*******************itemdetails.css**********************/
+/*******************itemdetails.css**********************/
+/*******************itemdetails.css**********************/
+/*******************itemdetails.css**********************/
+/*******************itemdetails.css**********************/
+/*******************itemdetails.css**********************/
+
+.item-detail-bar{
+    width:100%;
+    height:800px;
+    background-color:rgb(228, 252, 177);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-9{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(240, 217, 101);
+    position: relative;
+}
+
+.item-detail-img{
+    width:800px;
+    height:inherit;
+    float: left;
+    background-color: #f79b73;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.item-shopping-info{
+    width:400px;
+    height:inherit;
+    float: left;
+    background-color: rgb(174, 150, 244);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.sub-item-img-small{
+    width:120px;
+    height:480px;
+    float:left;
+    position: relative;
+    box-sizing: border-box;
+    background-color: rgb(246, 221, 143);
+}
+
+.sub-item-img-big{
+    width:680px;
+    height:680px;
+    float:left;
+    position: relative;
+    box-sizing: border-box;
+    background-color: rgb(200, 244, 169);
+}
+
+/*******************register.css**********************/
+/*******************register.css**********************/
+/*******************register.css**********************/
+/*******************register.css**********************/
+/*******************register.css**********************/
+/*******************register.css**********************/
+
+.register-details-area{
+    width:100%;
+    height:720px;
+    float: left;
+    margin: 0;
+    background-color: rgb(186, 218, 41);
+}
+.create-account-title{
+    width:100%;
+    height:80px;
+    float: left;
+    margin: 0;
+    background-color:rgb(246, 132, 136);
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+.create-account-title span{
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.customer-register-form{
+    margin:0;
+}
+
+.customer-register-form-left{
+    width: 50%;
+    height: 520px;
+    position: relative;
+    float: left;
+    background-color: rgb(175, 238, 177);
+}
+
+.customer-register-form-right{
+    width: 50%;
+    height: 520px;
+    position: relative;
+    float: left;
+    background-color:rgb(240, 191, 209);
+}
+
+.cutomer-register-form-footer{
+    width:inherit;
+    height:120px;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+}

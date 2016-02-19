@@ -1,0 +1,133 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    margin:0;
+}
+
+.logo-search-bar{
+    width:100%;
+    height:80px;
+    margin:0;
+    background-color: rgb(174, 207, 186);
+    float:left;
+}
+
+.fixed-width-2{
+    width:1200px;
+    height:100%;
+    background-color: rgb(231, 254, 167);
+    margin:0 auto;
+    position: relative;
+}
+
+.main-logo-area{
+    height:80px;
+    width:240px;
+    background-color:rgb(124, 177, 207);
+    float:left;
+}
+
+.login-page-bar{
+    width:100%;
+    height:800px;
+    float: left;
+    margin: 0;
+    background-color: rgb(186, 218, 41);
+}
+
+.fixed-width-10{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color: rgb(250, 255, 163);
+    position: relative;
+}
+
+.chillibuy-info-bar {
+    width:100%;
+    height:160px;
+    background-color:rgb(184, 132, 205);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-6{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(9, 9, 9);
+    position: relative;
+}
+
+.new-customer-area{
+    width:50%;
+    height: inherit;
+    float: left;
+    background-color: rgb(228, 144, 210);
+}
+
+.customer-login-area{
+    width:50%;
+    height:inherit;
+    float: left;
+    background-color: rgb(176, 230, 170);
+    position:relative;
+}
+
+.customer-login-area-title{
+    width:100%;
+    height: 80px;
+    background-color: rgb(116, 212, 215);
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+
+input#button-signin{
+    width:80px;
+    height:30px;
+    background-color: rgb(238, 213, 43);
+}
+
+.login-info-area{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(143, 207, 146);
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.register-area{
+    width: 100%;
+    height: 400px;
+    background-color:rgb(247, 227, 136);
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.register-ul{
+    padding-top: 30px;
+}
+
+.register-ul li{
+    list-style:disc;
+    padding-bottom: 3px;
+}
+
+input#button-register{
+    width:80px;
+    height:30px;
+    background-color: rgb(238, 213, 43);
+}
+
+#button-register{
+    margin-top: 30px;
+}

@@ -1,0 +1,300 @@
+/* Rules for Google icon sizes: */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; } /* Default */
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    margin:0;
+}
+
+.top-bar {
+    width:100%;
+    height:40px;
+    background-color: rgb(226, 231, 228);
+    margin:0;
+    position: relative;
+}
+
+.fixed-width-1 {
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color: rgb(231, 208, 152);
+}
+
+.welcome{
+    float:left;
+}
+
+.chinese-version-area{
+    width:200px;
+    height:inherit;
+    font-size: 16px;
+    border: none;
+    float:left;
+    margin: 10px 0 0 10px;
+}
+
+.chinese-version-area:hover{
+    color:red;
+}
+
+.top-bar-li{
+    margin:0;
+    float:left;
+    height:inherit;
+    width:500px;
+    position: relative;
+    margin-left: 440px;
+}
+
+.nav-top-bar{
+    width: inherit;
+    height: inherit;
+    position: relative;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.nav-top-bar li{
+    float:left;
+    list-style: none;
+    position: relative;
+    padding-right: 20px;
+}
+
+.nav-top-bar i{
+    margin:0;
+    margin-right: 3px;
+}
+
+.top-bar-li li:hover{
+    color:red;
+}
+
+.logo-search-bar{
+    width:100%;
+    height:80px;
+    margin:0;
+    background-color: rgb(174, 207, 186);
+    float:left;
+}
+
+.fixed-width-2{
+    width:1200px;
+    height:100%;
+    background-color: rgb(231, 254, 167);
+    margin:0 auto;
+    position: relative;
+}
+
+.main-logo-area{
+    height:80px;
+    width:240px;
+    background-color:rgb(124, 177, 207);
+    float:left;
+}
+
+.main-logo {
+    padding:0;
+}
+
+.search-box-area{
+    height:80px;
+    width:720px;
+    background-color: rgb(200, 173, 233);
+    float:left;
+    position:relative;
+}
+
+.search-bar-main{
+    height:40px;
+    width:500px;
+    float:left;
+    border: 1px solid rgb(246, 204, 76);
+    font-size: 150%;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.search-button-main{
+    width:80px;
+    height:40px;
+    font-size: 30px;
+    float: left;
+    border: none;
+    background-color:rgb(246, 204, 76);
+    margin-top: 20px;
+}
+
+.shopping-cart-area{
+    width:240px;
+    height:80px;
+    float:left;
+    background-color:rgb(151, 230, 235);
+    text-align: center;
+}
+
+.shopping-cart-area span{
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.shopping-cart-button{
+    width:100px;
+    height:40px;
+    text-align: center;
+    border: none;
+    float: left;
+    margin: 20px 0 0 40px;
+    background-color: rgb(246, 204, 76);
+}
+
+.shopping-cart-button:hover{
+    color:red;
+}
+
+.category-bar {
+    width:100%;
+    height:40px;
+    background-color: rgb(226, 231, 228);
+    margin:0;
+    float: left;
+}
+
+.fixed-width-3 {
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color: rgb(231, 208, 152);
+}
+
+.all-category-area{
+    height:100%;
+    width:240px;
+    background-color:rgb(124, 177, 207);
+    float:left;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100%;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.seperate-category-area{
+    height:100%;
+    width:720px;
+    background-color:rgb(188, 240, 152);
+    float:left;
+    position:relative;
+}
+
+.shipping-info-area{
+    width:240px;
+    height:100%;
+    float:left;
+    background-color:rgb(242, 181, 162);
+    text-align: center;
+}
+
+.shipping-info-area i{
+    padding-top: 10px;
+    float:left;
+    padding-left: 10px;
+}
+
+.shipping-info-area span{
+    float: left;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.seperate-category-ul{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.seperate-category-ul li{
+    float:left;
+    list-style: none;
+    padding-right: 45px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.seperate-category-ul li:hover{
+    color:red;
+}
+
+.blank-div-bar {
+    width:100%;
+    height:40px;
+    background-color:rgb(112, 250, 153);
+    position: relative;
+    float: left;
+}
+
+.chillibuy-info-bar {
+    width:100%;
+    height:160px;
+    background-color:rgb(184, 132, 205);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-6{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(9, 9, 9);
+    position: relative;
+}
+
+.title-div-bar{
+    width:100%;
+    height:40px;
+    background-color:rgb(143, 230, 245);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-7{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(241, 202, 136);
+    position: relative;
+}
+
+.shopping-cart-bar{
+    width:100%;
+    height:600px;
+    background-color:rgb(228, 252, 177);
+    position: relative;
+    float: left;
+}
+
+.fixed-width-9{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+    background-color:rgb(240, 217, 101);
+    position: relative;
+}
+
+.shopping-cart-div-left{
+    width:840px;
+    height:100%;
+    float: left;
+    position: relative;
+    background-color:rgb(235, 172, 204);
+}
+.shopping-cart-div-right{
+    width:360px;
+    height:100%;
+    float: left;
+    position: relative;
+    background-color:rgb(162, 139, 224);
+}
