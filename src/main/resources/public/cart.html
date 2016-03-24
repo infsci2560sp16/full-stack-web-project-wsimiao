@@ -1,12 +1,13 @@
 <!doctype html>
 <html>
 <head>
-    <title>Skin Store</title>
+    <title>Shopping Cart</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/styletest.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/cartjs.js"></script>
 
 </head>
 <body>
@@ -22,10 +23,10 @@
 
     <div class="welcome-r">
       <ul class="nav-customer-list pd">
-        <li><a href="#"><i class="fa fa-info-circle"></i> Contact</a></li>
-        <li><a href="#"><i class="fa fa-heart"></i> Favoriate</a></li>
-        <li><a href="#"><i class="fa fa-cube"></i>  Order</a></li>
-        <li><a href="login.html"><i class="fa fa-user"></i> Login/SignUp</a></li>
+        <li><a href="contact.php"><i class="fa fa-info-circle"></i> Contact</a></li>
+        <li><a href="my-love.php"><i class="fa fa-heart"></i> Favoriate</a></li>
+        <li><a href="my-orders.php"><i class="fa fa-cube"></i>  Order</a></li>
+        <li><a href="login.php"><i class="fa fa-user"></i> Login/SignUp</a></li>
       </ul>
     </div>
 
@@ -33,7 +34,7 @@
     </div>
 
   </div>
-
+<!--                 -->
   <div class="nav-search">
     <div class="nav-search-container">
       <div class="logo">
@@ -50,12 +51,12 @@
 
       </div>
       <div class="cart">
-        <button id="cart-btn" ><i class="fa fa-shopping-cart"></i>Shopping Cart</button>
+        <button id="cart-btn" ><i class="fa fa-shopping-cart"></i> Shopping Cart</button>
       </div>
 
   </div>
 </div>
-
+<!--                -->
 
 
   <div class="nav-category">
@@ -64,6 +65,17 @@
       <div class="quick-link">
         <strong>Quick Link</strong>
       </div>
+      <div class="links">
+        <br />
+        <ul class="link-list">
+          <li><a href="newarrived.php">New Arrived</a></li>
+          <li><a href="bestseller.php">Best Seller</a></li>
+          <li><a href="valuesets.php">Value Sets</a></li>
+          <li><a href="weeklyspecial.php">Weekly Specials</a></li>
+        </ul>
+      </div>
+
+
 
       <!--
 
@@ -298,62 +310,93 @@
     </div>
   </div>
 
-</div>
+</div><!--The end of Header-->
+
+<div class="cart-page">
+  <div class="cart-container">
+
+    <div class="cart-content-l">
+      <p>Your Shopping Cart<a href="index.html">continue shopping></a></p>
+
+      <div class="cart-details">
+
+        <div class="cart-details-title">
+          <span id="title-cart">There are 2 items in the cart</span>
+          <!--Try adding Node childNodes  -->
+          <button id="generate-new-div" style="float:right; background-color:red" onclick="generateDiv()">Generate New Div</button>
+
+        </div>
+
+        <div class="item-cart-container" id="parent-item-div">
+          <!-- A single item in the cart-->
+          <div class="item-cart">
+            <div class="item-cont-img">
+              <img src="images/item1.jpg" alt="">
+            </div>
+            <div class="item-cont-des">
+              <p><a href="#">Parsley Seed Anti-Oxidant Serum, 100ml</a></p>
+            </div>
+            <div class="item-cont-price">
+              <p id="product-price">67</p>
+            </div>
+            <div class="item-cont-quantity">
+              <select class="item-quan" id="select-quantity-no" onchange="calculateTotal()">
+                <option selected value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+            </div>
+            <div class="item-cont-totalpri">
+              <p class="item-total" id="item-total-price">67</p>
+            </div>
+          </div>
+
+
+          <!--end of an item-->
 
 
 
+        </div>
 
-<div class="slide">
-  <div class="slide-container">
-    <div class="links-index">
-      <br />
-      <ul class="link-list">
-        <li><a href="newarrived.php">New Arrived</a></li>
-        <li><a href="bestseller.php">Best Seller</a></li>
-        <li><a href="valuesets.php">Value Sets</a></li>
-        <li><a href="weeklyspecial.php">Weekly Specials</a></li>
-      </ul>
-    </div>
 
-    <div class="slide-show">
-      <img src="images/slide1.jpg" id="slideshow" alt="">
-      <script src="js/slideshow.js"></script>
-    </div>
+      </div>
 
-    <div class="hot-deal">
-    </div>
+    </div><!--end of "cart-content-l"-->
 
+    <div class="cart-content-r">
+      <div class="cart-promo">
+        <span id="promo-title"><i class="fa fa-tag"></i> Promotion Code</span>
+        <br />
+        <br />
+        <input type="text" id="promo-text">
+        <a href="#" class="promo-btn">Apply</a>
+      </div>
+
+      <div class="cart-checkout">
+        <div class="cart-checkout-cont">
+          <div>
+            <span class="cart-title-l">Amount</span><span class="cart-title-r">134.00</span>
+          </div>
+          <div style="border-bottom: 1px solid #F5F5F5">
+            <span class="cart-title-l">Promo Code</span><span class="cart-title-r" >-0</span>
+          </div>
+
+          <div style="margin-top:10px">
+            <span class="cart-title-l">Total Amount</span><span class="cart-title-r" >134.00</span>
+          </div>
+          <a href="checkout.php" class="check-out-btn">CHECK OUT</a>
+        </div>
+
+      </div>
+
+    </div><!--end of "cart-content-r"-->
 
 
   </div>
-</div>
-
-
-
-<div class="promo-bar">
-  <div class="promo-bar-container">
-    <div class="left-two">
-      <a href="item.html"><img src="images/1.jpg" id ="image1" alt=""></a>
-      <a href="item.html"><img src="images/1.jpg" id ="image2" alt=""></a>
-    </div>
-    <div class="middle-one">
-      <a href="item.html"><img src="images/a.jpg" id ="image3" alt=""></a>
-    </div>
-    <div class="right-two">
-      <a href="item.html"><img src="images/1.jpg" id ="image4" alt=""></a>
-      <a href="item.html"><img src="images/1.jpg" id ="image5" alt=""></a>
-    </div>
-  </div>
-</div>
-
-
-
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-
+</div><!--end of "cart-page"-->
 
 </body>
 
