@@ -25,6 +25,9 @@ public class Main {
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
 
+    //this is new added
+    new UserController(new UserService());
+
     get("/hello", (req, res) -> {
           RelativisticModel.select();
 
