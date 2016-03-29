@@ -11,7 +11,7 @@
 
 </head>
 <body>
-  <#include "header.ftl">
+  <#include "myheader.ftl">
 
   <div class="slide">
   <div class="slide-container">
