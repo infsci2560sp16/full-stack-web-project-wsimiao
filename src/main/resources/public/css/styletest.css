@@ -824,3 +824,42 @@ html a{
   background-color: white;
   color:#4285F4;
 }
+
+/************************CSS for all items.html***********************************/
+
+.all-items-container{
+  width:1000px;
+  min-height: 450px;
+  background-color: gray;
+  float:left;
+  position: relative;
+
+}
+.allItems{
+  width:inherit;
+  min-height: 400px;
+  background-color: yellow;
+
+}
+
+.oneItem {
+  width:250px;
+  height: 380px;
+  background-color: orange;
+  float:left;
+}
+.oneItem-img{
+  width:200px;
+  padding:25px;
+}
+
+.oneItem-description{
+  width:200px;
+  padding-left: 25px;
+  text-align: center;
+  background-color: white;
+}
+.oneItem-description span{
+  font-size: 0.9em;
+
+}
