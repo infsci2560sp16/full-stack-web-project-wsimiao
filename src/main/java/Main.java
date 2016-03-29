@@ -15,8 +15,9 @@ import static javax.measure.unit.SI.KILOGRAM;
 import javax.measure.quantity.Mass;
 import org.jscience.physics.model.RelativisticModel;
 import org.jscience.physics.amount.Amount;
-
+import com.google.gson.Gson;
 import com.heroku.sdk.jdbc.DatabaseUrl;
+import skinstore.item.service.*;
 
 public class Main {
 
@@ -69,6 +70,31 @@ public class Main {
         if (connection != null) try{connection.close();} catch(SQLException e){}
       }
     }, new FreeMarkerEngine());
+
+
+         Gson gson = new Gson();
+    
+        get("/item", (request,response) -> {
+          HashMap model = new HashMap();
+          model.put("item_brand","Giorgio Armani");
+          model.put("item_name","Luminous Silk Foundation");
+          model.put("item_id", "1359553");
+          model.put("item_size", "1oz");
+          model.put("item_price", "62");
+          return new ModelAndView(model,"item.ftl");
+        }, new FreeMarkerEngine());
+        
+        get("/items",(request,response)->{
+          ItemService itemService =  new ItemService();
+          Map attributes = new HashMap<>();
+          attributes.put("allitems", itemService.getAllItems());
+          return new ModelAndView(attributes,"test.ftl");
+        }, new FreeMarkerEngine());
+        
+        get("/itemsJson",(request,response) ->{
+          ItemService itemService = new ItemService();
+          return itemService.getItems();
+        }, gson::toJson);
 
   }
 

@@ -322,26 +322,20 @@
 
     <div class="item-image">
       <div class="item-image-container">
-        <img name="preview" src="images/armani1.jpg" alt="">
-      </div>
-      <div class="thumbnails">
-        <img onmousedown= "preview.src = img1.src" name="img1" src="images/armani1.jpg" alt=""/>
-        <img onmousedown = "preview.src = img2.src" name="img2" src="images/armani2.jpg" alt=""/>
-        <img onmousedown = "preview.src = img3.src" name="img3" src="images/armani3.jpg" alt=""/>
-
+        <img src="images/a.jpg" alt="">
       </div>
     </div>
     <div class="item-detail">
       <div class="item-info-container">
         <div class="item-info-primary">
-          <span class="item-prd-title"> Giorgio Armani </span><br />
-          <span><strong>Luminous Silk Foundation</strong></span>
-          <span style="font-size:0.7em">ITEM 1359553 . SIZE 1oz</span>
+          <span class="item-prd-title">${item_brand}</span><br />
+          <span>${item_name}</span>
+          <span style="font-size:0.7em">ITEM ${item_id} . SIZE ${item_size}</span>
 
 
         </div>
         <div class="item-info-price">
-          $62
+          ${item_price}
         </div>
         <div class="item-info-quantity">
           <label class="quantity-label">QTY</label>
