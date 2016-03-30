@@ -71,9 +71,35 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
+    get("/products", (req, res) -> {
+      Connection connection = null;
+      Map<String, Object> attributes = new HashMap<>();
+      try {
+        connection = DatabaseUrl.extract().getConnection();
+
+        Statement stmt = connection.createStatement();
+        stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (price int, name varchar(50), category vachar(50), id int, size float, brandName varchar(50), stock int, img varchar(100), detail TEXT, love int,PRIMARY KEY (id)");
+        stmt.executeUpdate("INSERT INTO products VALUES (62, 'Luminous Silk Foundation', 'foundation', 1, 1, 'Armani', 20, 'images/0001.jpg', 'This award-winning foundation is formulated with micro-fil technology, producing a low-density product that pairs high-impact pigments with weightless texture. ', 201)");
+        ResultSet rs = stmt.executeQuery("SELECT tick FROM products");
+
+        ArrayList<String> output = new ArrayList<String>();
+        while (rs.next()) {
+          output.add( "Read from DB the name is : " + rs.getTimestamp("name"));
+        }
+
+        attributes.put("results", output);
+        return new ModelAndView(attributes, "db.ftl");
+      } catch (Exception e) {
+        attributes.put("message", "There was an error: " + e);
+        return new ModelAndView(attributes, "error.ftl");
+      } finally {
+        if (connection != null) try{connection.close();} catch(SQLException e){}
+      }
+    }, new FreeMarkerEngine());
+
 
          Gson gson = new Gson();
-    
+
         get("/item", (request,response) -> {
           HashMap model = new HashMap();
           model.put("item_brand","Giorgio Armani");
@@ -83,14 +109,14 @@ public class Main {
           model.put("item_price", "62");
           return new ModelAndView(model,"item.ftl");
         }, new FreeMarkerEngine());
-        
+
         get("/items",(request,response)->{
           ItemService itemService =  new ItemService();
           Map attributes = new HashMap<>();
           attributes.put("allitems", itemService.getAllItems());
           return new ModelAndView(attributes,"test.ftl");
         }, new FreeMarkerEngine());
-        
+
         get("/itemsJson",(request,response) ->{
           ItemService itemService = new ItemService();
           return itemService.getItems();
