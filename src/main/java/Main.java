@@ -78,8 +78,8 @@ public class Main {
         // stmt.executeUpdate("INSERT INTO items VALUES (000002, 'Kobe XI', 'NIKE KOBE', 'Basketball shoes', 'The last generation of Nike Kobe shoes', 'Yellow/Purple', 4.9, 10, 'Male', 8.5)");
 
         stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (itemID int, itemPrice int, itemName varchar(100), itemBrand varchar(100), itemCategory varchar(100), itemDescription varchar(200), itemColor varchar(50), itemLove int, itemStock int, itemGender varchar(20), itemSize float, itemImg varchar(100))");
-        stmt.executeUpdate("INSERT INTO products VALUES (000001, 62,  'Luminous Silk Foundation', 'Armarni', 'Foundation', 'This is an award-winning foundation', 'Ivory', 2000, 5, 'Female', 1.0,'images/0001.jpg')");
-        stmt.executeUpdate("INSERT INTO products VALUES (000002, 39, 'Rainforest of Seawater Foundation', 'Tarte', 'Foundation', 'A lightweight, full-coverage foundation', 'Ivory', 1000, 10, 'Female', 1.0, 'images/0002.jpg')");
+        stmt.executeUpdate("INSERT INTO products VALUES (000003, 62,  'Diorskin Forever Flawless Wear Makeup', 'Dior', 'Foundation', 'A couture inspire liquid foundation', 'Ivory', 3000, 25, 'Female', 1.0,'images/0003.jpg')");
+        stmt.executeUpdate("INSERT INTO products VALUES (000004, 35, 'Lock it Foundation', 'Kat Von D', 'Foundation', 'A high pigment foundation for full coverage', 'Ivory', 1500, 10, 'Female', 1.0, 'images/0004.jpg')");
 
         ResultSet rs = stmt.executeQuery("SELECT * FROM products");
 
