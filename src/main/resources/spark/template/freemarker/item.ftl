@@ -322,14 +322,14 @@
 
     <div class="item-image">
       <div class="item-image-container">
-        <img src= ${item_img} alt="0001.jpg">
+        <img src= "images/0001.jpg" alt="0001.jpg">
       </div>
     </div>
     <div class="item-detail">
       <div class="item-info-container">
         <div class="item-info-primary">
           <span class="item-prd-title">${item_brand}</span><br />
-          <span>${item_name}</span>
+          <span>${item_name} </span>
           <span style="font-size:0.7em">ITEM ${item_id} . SIZE ${item_size}</span>
 
 

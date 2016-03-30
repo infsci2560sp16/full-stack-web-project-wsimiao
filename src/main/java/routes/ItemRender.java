@@ -16,11 +16,6 @@ import spark.Request;
 
 public class ItemRender{
 
-  private static boolean shouldReturnHtml(Request request) {
-      String accept = request.headers("Accept");
-      return accept != null && accept.contains("text/html");
-  }
-
   Gson gson = new Gson();
 
   public ItemRender() {
@@ -28,14 +23,13 @@ public class ItemRender{
   }
 
   private void setupRoutes(){
-    get("/item", (request,response) -> {
-        HashMap model = new HashMap();
+    get("/item123", (request,response) -> {
+        Map<String, Object> model = new HashMap<>();
         model.put("item_brand","Giorgio Armani");
         model.put("item_name","Luminous Silk Foundation");
         model.put("item_id", "1359553");
         model.put("item_size", "1oz");
         model.put("item_price", "62");
-        model.put("item_img", "images/0001.jpg");
         return new ModelAndView(model,"item.ftl");
     }, new FreeMarkerEngine());
 
