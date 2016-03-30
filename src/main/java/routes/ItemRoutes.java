@@ -14,6 +14,17 @@ import static spark.Spark.get;
 import com.heroku.sdk.jdbc.DatabaseUrl;
 import spark.Request;
 
+import java.io.StringWriter;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
 public class ItemRoutes {
 
     private static boolean shouldReturnHtml(Request request) {
@@ -79,6 +90,64 @@ public class ItemRoutes {
           if (connection != null) try{connection.close();} catch(SQLException e){}
         }
       }, gson::toJson);
+
+
+      //get XML file
+
+      get("/skinstore/getItemsXML", (req, res) -> {
+	          Connection connection = null;
+	          res.type("application/xml");
+	          Map<String, Object> attributes = new HashMap<>();
+
+	          //XML
+	  			  DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	  		    DocumentBuilder builder = factory.newDocumentBuilder();
+	  		    Document doc = builder.newDocument();
+	  		    Element results = doc.createElement("Results"); //the result set tag name
+	  		    doc.appendChild(results);
+
+			try {
+				connection = DatabaseUrl.extract().getConnection();
+				Statement stmt = connection.createStatement();
+				ResultSet rs = stmt.executeQuery("SELECT * FROM products");
+				ResultSetMetaData rsmd = rs.getMetaData();
+				int columnCount = rsmd.getColumnCount();
+				while (rs.next()) {
+					Element row = doc.createElement("Item"); // the tag for
+																// every item
+					results.appendChild(row);
+					for (int i = 1; i <= columnCount; i++) {
+						String columnName = rsmd.getColumnName(i);
+						Object value = rs.getObject(i);
+						Element node = doc.createElement(columnName);
+						node.appendChild(doc.createTextNode(value.toString()));
+						row.appendChild(node);
+					}
+				}
+				DOMSource domSource = new DOMSource(doc);
+				TransformerFactory tf = TransformerFactory.newInstance();
+				Transformer transformer = tf.newTransformer();
+				transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+				transformer.setOutputProperty(OutputKeys.METHOD, "xml");
+				transformer.setOutputProperty(OutputKeys.ENCODING, "ISO-8859-1");
+				StringWriter sw = new StringWriter();
+				StreamResult sr = new StreamResult(sw);
+				transformer.transform(domSource, sr);
+
+				String xml = sw.toString();
+				return xml;
+
+			} catch (Exception e) {
+				attributes.put("message", "There was an error: " + e);
+				return new ModelAndView(attributes, "error.ftl");
+			} finally {
+				if (connection != null)
+					try {
+						connection.close();
+					} catch (SQLException e) {
+					}
+			}
+		});
 
 
         get("/api/slide15", (req, res) -> {
