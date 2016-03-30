@@ -63,65 +63,48 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-    get("/insertItems", (req, res) -> {
+    // get("/insertItems", (req, res) -> {
+    //   Connection connection = null;
+    //   Map<String, Object> attributes = new HashMap<>();
+    //   try {
+    //     connection = DatabaseUrl.extract().getConnection();
+    //
+    //     Statement stmt = connection.createStatement();
+    //
+    //     // stmt.executeUpdate("CREATE TABLE IF NOT EXISTS items (itemID int, itemName varchar(100), itemBrand varchar(100), itemCategory varchar(100), itemDescription varchar(200), itemColor varchar(50), itemRating float, itemStock int, itemGender varchar(20), itemSize float)");
+    //
+    //
+    //     stmt.executeUpdate("INSERT INTO products VALUES (3, 62,  'Diorskin Forever Flawless Wear Makeup', 'Dior', 'Foundation', 'A couture inspire liquid foundation', 'Ivory', 3000, 25, 'Female', 1.0,'images/0003.jpg')");
+    //     stmt.executeUpdate("INSERT INTO products VALUES (4, 35, 'Lock it Foundation', 'Kat Von D', 'Foundation', 'A high pigment foundation for full coverage', 'Ivory', 1500, 10, 'Female', 1.0, 'images/0004.jpg')");
+    //     stmt.executeUpdate("INSERT INTO products VALUES (5, 43,  'Ultra HD Invisible Cover Foundation', 'Make Up For Ever', 'Foundation', 'A bestselling HD foundation', 'Ivory', 3500, 25, 'Female', 1.0,'images/0005.jpg')");
+    //     stmt.executeUpdate("INSERT INTO products VALUES (6, 38, 'Double Wear Stay in Foundation', 'Estee Lauder', 'Foundation', 'A 15 hour flawless foundation', 'Deep', 1500, 10, 'Female', 1.0, 'images/0006.jpg')");
+    //
+    //
+    //     ResultSet rs = stmt.executeQuery("SELECT * FROM products");
+    //
+    //     ArrayList<String> output = new ArrayList<String>();
+    //     while (rs.next()) {
+    //       output.add( "Read from DB the name is : " + rs.getString("itemBrand"));
+    //     }
+    //     attributes.put("results", output);
+    //     return new ModelAndView(attributes, "db.ftl");
+    //   } catch (Exception e) {
+    //     attributes.put("message", "There was an error: " + e);
+    //     return new ModelAndView(attributes, "error.ftl");
+    //   } finally {
+    //     if (connection != null) try{connection.close();} catch(SQLException e){}
+    //   }
+    // }, new FreeMarkerEngine());
+
+    get("/skinstore/getItems", (req, res) -> {
       Connection connection = null;
       Map<String, Object> attributes = new HashMap<>();
       try {
         connection = DatabaseUrl.extract().getConnection();
 
         Statement stmt = connection.createStatement();
-        // stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (price int, name varchar(50), category varchar(50), id int, size float, brandName varchar(50), stock int, img varchar(100), detail varchar(200), love int");
-        // stmt.executeUpdate("INSERT INTO products VALUES (62, 'Luminous Silk Foundation', 'foundation', 1, 1.0, 'Armani', 20, 'images/0001.jpg', 'This award-winning foundation ', 201)");
-        // stmt.executeUpdate("INSERT INTO products VALUES (39, 'Rainforest of the Sea Water Foundation Broad Spectrum SPF 15', 'foundation', 2, 1.0, 'tarte', 15, 'images/0002.jpg', 'A lightweight, full-coverage hydrating foundation ', 100000)");
-        // stmt.executeUpdate("CREATE TABLE IF NOT EXISTS items (itemID int, itemName varchar(100), itemBrand varchar(100), itemCategory varchar(100), itemDescription varchar(200), itemColor varchar(50), itemRating float, itemStock int, itemGender varchar(20), itemSize float)");
-        // stmt.executeUpdate("INSERT INTO items VALUES (000001, 'Air Jordan 1', 'Air Jordan', 'Basketball shoes', 'The first generation of Jordan shoes', 'Black/Red', 5.0, 5, 'Male', 9.0)");
-        // stmt.executeUpdate("INSERT INTO items VALUES (000002, 'Kobe XI', 'NIKE KOBE', 'Basketball shoes', 'The last generation of Nike Kobe shoes', 'Yellow/Purple', 4.9, 10, 'Male', 8.5)");
-
-        // stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (itemID int, itemPrice int, itemName varchar(100), itemBrand varchar(100), itemCategory varchar(100), itemDescription varchar(200), itemColor varchar(50), itemLove int, itemStock int, itemGender varchar(20), itemSize float, itemImg varchar(100))");
-        // stmt.executeUpdate("INSERT INTO products VALUES (000005, 43,  'Ultra HD Invisible Cover Foundation', 'Make Up For Ever', 'Foundation', 'A bestselling HD foundation', 'Ivory', 3500, 25, 'Female', 1.0,'images/0005.jpg')");
-        // stmt.executeUpdate("INSERT INTO products VALUES (000006, 38, 'Double Wear Stay in Foundation', 'Estee Lauder', 'Foundation', 'A 15 hour flawless foundation', 'Deep', 1500, 10, 'Female', 1.0, 'images/0006.jpg')");
-        stmt.executeUpdate("DELETE FROM products WHERE itemID > 2");
-        stmt.executeUpdate("INSERT INTO products VALUES (3, 62,  'Diorskin Forever Flawless Wear Makeup', 'Dior', 'Foundation', 'A couture inspire liquid foundation', 'Ivory', 3000, 25, 'Female', 1.0,'images/0003.jpg')");
-        stmt.executeUpdate("INSERT INTO products VALUES (4, 35, 'Lock it Foundation', 'Kat Von D', 'Foundation', 'A high pigment foundation for full coverage', 'Ivory', 1500, 10, 'Female', 1.0, 'images/0004.jpg')");
-        stmt.executeUpdate("INSERT INTO products VALUES (5, 43,  'Ultra HD Invisible Cover Foundation', 'Make Up For Ever', 'Foundation', 'A bestselling HD foundation', 'Ivory', 3500, 25, 'Female', 1.0,'images/0005.jpg')");
-        stmt.executeUpdate("INSERT INTO products VALUES (6, 38, 'Double Wear Stay in Foundation', 'Estee Lauder', 'Foundation', 'A 15 hour flawless foundation', 'Deep', 1500, 10, 'Female', 1.0, 'images/0006.jpg')");
-
 
         ResultSet rs = stmt.executeQuery("SELECT * FROM products");
-
-        ArrayList<String> output = new ArrayList<String>();
-        while (rs.next()) {
-          output.add( "Read from DB the name is : " + rs.getString("itemBrand"));
-        }
-        attributes.put("results", output);
-        return new ModelAndView(attributes, "db.ftl");
-      } catch (Exception e) {
-        attributes.put("message", "There was an error: " + e);
-        return new ModelAndView(attributes, "error.ftl");
-      } finally {
-        if (connection != null) try{connection.close();} catch(SQLException e){}
-      }
-    }, new FreeMarkerEngine());
-
-    get("/skapi/getItems", (req, res) -> {
-      Connection connection = null;
-      Map<String, Object> attributes = new HashMap<>();
-      try {
-        connection = DatabaseUrl.extract().getConnection();
-
-        Statement stmt = connection.createStatement();
-        // stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (price int, name varchar(50), category varchar(50), id int, size float, brandName varchar(50), stock int, img varchar(100), detail varchar(200), love int");
-        // stmt.executeUpdate("INSERT INTO products VALUES (62, 'Luminous Silk Foundation', 'foundation', 1, 1.0, 'Armani', 20, 'images/0001.jpg', 'This award-winning foundation ', 201)");
-        // stmt.executeUpdate("INSERT INTO products VALUES (39, 'Rainforest of the Sea Water Foundation Broad Spectrum SPF 15', 'foundation', 2, 1.0, 'tarte', 15, 'images/0002.jpg', 'A lightweight, full-coverage hydrating foundation ', 100000)");
-        // stmt.executeUpdate("CREATE TABLE IF NOT EXISTS items (itemID int, itemName varchar(100), itemBrand varchar(100), itemCategory varchar(100), itemDescription varchar(200), itemColor varchar(50), itemRating float, itemStock int, itemGender varchar(20), itemSize float)");
-        // stmt.executeUpdate("INSERT INTO items VALUES (000001, 'Air Jordan 1', 'Air Jordan', 'Basketball shoes', 'The first generation of Jordan shoes', 'Black/Red', 5.0, 5, 'Male', 9.0)");
-        // stmt.executeUpdate("INSERT INTO items VALUES (000002, 'Kobe XI', 'NIKE KOBE', 'Basketball shoes', 'The last generation of Nike Kobe shoes', 'Yellow/Purple', 4.9, 10, 'Male', 8.5)");
-
-        // stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (itemID int, itemPrice int, itemName varchar(100), itemBrand varchar(100), itemCategory varchar(100), itemDescription varchar(200), itemColor varchar(50), itemLove int, itemStock int, itemGender varchar(20), itemSize float, itemImg varchar(100))");
-        // stmt.executeUpdate("INSERT INTO products VALUES (000005, 43,  'Ultra HD Invisible Cover Foundation', 'Make Up For Ever', 'Foundation', 'A bestselling HD foundation', 'Ivory', 3500, 25, 'Female', 1.0,'images/0005.jpg')");
-        // stmt.executeUpdate("INSERT INTO products VALUES (000006, 38, 'Double Wear Stay in Foundation', 'Estee Lauder', 'Foundation', 'A 15 hour flawless foundation', 'Deep', 1500, 10, 'Female', 1.0, 'images/0006.jpg')");
-
-        ResultSet rs = stmt.executeQuery("SELECT * FROM products WHERE itemID < 5");
 
         ArrayList<String> output = new ArrayList<String>();
         while (rs.next()) {
