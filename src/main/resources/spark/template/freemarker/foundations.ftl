@@ -40,7 +40,7 @@
     <#list allitems as onepiece>
     <div class = "oneItem">
       <div class ="oneItem-img">
-        <img src = ${onepiece.img} alt = "item" style="width:200px; height:200px;">
+        <img src = "images/0001.jpg" alt = "item" style="width:200px; height:200px;">
       </div>
       <div class = "oneItem-description">
         <span>${onepiece.brandName}</span></br>
