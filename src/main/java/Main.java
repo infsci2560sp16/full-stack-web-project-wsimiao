@@ -80,12 +80,12 @@ public class Main {
         // stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (itemID int, itemPrice int, itemName varchar(100), itemBrand varchar(100), itemCategory varchar(100), itemDescription varchar(200), itemColor varchar(50), itemLove int, itemStock int, itemGender varchar(20), itemSize float, itemImg varchar(100))");
         // stmt.executeUpdate("INSERT INTO products VALUES (000005, 43,  'Ultra HD Invisible Cover Foundation', 'Make Up For Ever', 'Foundation', 'A bestselling HD foundation', 'Ivory', 3500, 25, 'Female', 1.0,'images/0005.jpg')");
         // stmt.executeUpdate("INSERT INTO products VALUES (000006, 38, 'Double Wear Stay in Foundation', 'Estee Lauder', 'Foundation', 'A 15 hour flawless foundation', 'Deep', 1500, 10, 'Female', 1.0, 'images/0006.jpg')");
-        stmt.executeUpdate("DELETE FROM products WHERE itemID > 3");
+        stmt.executeUpdate("DELETE FROM products WHERE itemID > 2");
         stmt.executeUpdate("INSERT INTO products VALUES (3, 62,  'Diorskin Forever Flawless Wear Makeup', 'Dior', 'Foundation', 'A couture inspire liquid foundation', 'Ivory', 3000, 25, 'Female', 1.0,'images/0003.jpg')");
         stmt.executeUpdate("INSERT INTO products VALUES (4, 35, 'Lock it Foundation', 'Kat Von D', 'Foundation', 'A high pigment foundation for full coverage', 'Ivory', 1500, 10, 'Female', 1.0, 'images/0004.jpg')");
         stmt.executeUpdate("INSERT INTO products VALUES (5, 43,  'Ultra HD Invisible Cover Foundation', 'Make Up For Ever', 'Foundation', 'A bestselling HD foundation', 'Ivory', 3500, 25, 'Female', 1.0,'images/0005.jpg')");
         stmt.executeUpdate("INSERT INTO products VALUES (6, 38, 'Double Wear Stay in Foundation', 'Estee Lauder', 'Foundation', 'A 15 hour flawless foundation', 'Deep', 1500, 10, 'Female', 1.0, 'images/0006.jpg')");
-        
+
 
         ResultSet rs = stmt.executeQuery("SELECT * FROM products");
 
