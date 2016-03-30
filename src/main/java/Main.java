@@ -1,23 +1,26 @@
-import java.sql.*;
-import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.Map;
-
-import java.net.URI;
-import java.net.URISyntaxException;
-
 import static spark.Spark.*;
-import spark.template.freemarker.FreeMarkerEngine;
 import spark.ModelAndView;
-import static spark.Spark.get;
+import spark.template.freemarker.FreeMarkerEngine;
 
-import static javax.measure.unit.SI.KILOGRAM;
-import javax.measure.quantity.Mass;
-import org.jscience.physics.model.RelativisticModel;
-import org.jscience.physics.amount.Amount;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.Statement;
+import java.util.*;
 import com.google.gson.Gson;
 import com.heroku.sdk.jdbc.DatabaseUrl;
+
 import skinstore.item.service.*;
+
+import java.io.StringWriter;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 public class Main {
 
@@ -27,16 +30,9 @@ public class Main {
     staticFileLocation("/public");
 
     //this is new added
-    new UserController(new UserService());
+    //new UserController(new UserService());
 
-    get("/hello", (req, res) -> {
-          RelativisticModel.select();
 
-          String energy = System.getenv().get("ENERGY");
-
-          Amount<Mass> m = Amount.valueOf(energy).to(KILOGRAM);
-          return "E=mc^2: " + energy + " = " + m.toString();
-        });
 
     /*get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
@@ -71,7 +67,7 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-    get("/products", (req, res) -> {
+    get("/insertItems", (req, res) -> {
       Connection connection = null;
       Map<String, Object> attributes = new HashMap<>();
       try {
@@ -80,11 +76,13 @@ public class Main {
         Statement stmt = connection.createStatement();
         stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (price int, name varchar(50), category vachar(50), id int, size float, brandName varchar(50), stock int, img varchar(100), detail TEXT, love int,PRIMARY KEY (id)");
         stmt.executeUpdate("INSERT INTO products VALUES (62, 'Luminous Silk Foundation', 'foundation', 1, 1, 'Armani', 20, 'images/0001.jpg', 'This award-winning foundation is formulated with micro-fil technology, producing a low-density product that pairs high-impact pigments with weightless texture. ', 201)");
-        ResultSet rs = stmt.executeQuery("SELECT tick FROM products");
+        stmt.executeUpdate("INSERT INTO products VALUES (39, 'Rainforest of the Sea Water Foundation Broad Spectrum SPF 15', 'foundation', 2, 1, 'tarte', 15, 'images/0002.jpg', 'A lightweight, full-coverage hydrating foundation infused with tarte's Rainforest of the Sea™ complex and non-chemical SPF 15 sunscreen. ', 100000)");
+
+        ResultSet rs = stmt.executeQuery("SELECT * FROM products");
 
         ArrayList<String> output = new ArrayList<String>();
         while (rs.next()) {
-          output.add( "Read from DB the name is : " + rs.getTimestamp("name"));
+          output.add( "Read from DB the name is : " + rs.getString("name"));
         }
 
         attributes.put("results", output);
@@ -97,30 +95,6 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-
-         Gson gson = new Gson();
-
-        get("/item", (request,response) -> {
-          HashMap model = new HashMap();
-          model.put("item_brand","Giorgio Armani");
-          model.put("item_name","Luminous Silk Foundation");
-          model.put("item_id", "1359553");
-          model.put("item_size", "1oz");
-          model.put("item_price", "62");
-          return new ModelAndView(model,"item.ftl");
-        }, new FreeMarkerEngine());
-
-        get("/items",(request,response)->{
-          ItemService itemService =  new ItemService();
-          Map attributes = new HashMap<>();
-          attributes.put("allitems", itemService.getAllItems());
-          return new ModelAndView(attributes,"test.ftl");
-        }, new FreeMarkerEngine());
-
-        get("/itemsJson",(request,response) ->{
-          ItemService itemService = new ItemService();
-          return itemService.getItems();
-        }, gson::toJson);
 
   }
 
