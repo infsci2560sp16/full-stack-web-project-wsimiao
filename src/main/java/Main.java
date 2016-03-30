@@ -71,8 +71,8 @@ public class Main {
 
         Statement stmt = connection.createStatement();
         stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (price int, name varchar(50), category varchar(50), id int, size float, brandName varchar(50), stock int, img varchar(100), detail varchar(200), love int");
-        stmt.executeUpdate("INSERT INTO products VALUES (62, 'Luminous Silk Foundation', 'foundation', 1, 1.0, 'Armani', 20, 'images/0001.jpg', 'This award-winning foundation is formulated with micro-fil technology, producing a low-density product that pairs high-impact pigments with weightless texture. ', 201)");
-        stmt.executeUpdate("INSERT INTO products VALUES (39, 'Rainforest of the Sea Water Foundation Broad Spectrum SPF 15', 'foundation', 2, 1.0, 'tarte', 15, 'images/0002.jpg', 'A lightweight, full-coverage hydrating foundation infused with tarte's Rainforest of the Sea™ complex and non-chemical SPF 15 sunscreen. ', 100000)");
+        stmt.executeUpdate("INSERT INTO products VALUES (62, 'Luminous Silk Foundation', 'foundation', 1, 1.0, 'Armani', 20, 'images/0001.jpg', 'This award-winning foundation ', 201)");
+        stmt.executeUpdate("INSERT INTO products VALUES (39, 'Rainforest of the Sea Water Foundation Broad Spectrum SPF 15', 'foundation', 2, 1.0, 'tarte', 15, 'images/0002.jpg', 'A lightweight, full-coverage hydrating foundation ', 100000)");
 
         ResultSet rs = stmt.executeQuery("SELECT * FROM products");
 
