@@ -77,7 +77,7 @@ public class Main {
         // stmt.executeUpdate("INSERT INTO items VALUES (000001, 'Air Jordan 1', 'Air Jordan', 'Basketball shoes', 'The first generation of Jordan shoes', 'Black/Red', 5.0, 5, 'Male', 9.0)");
         // stmt.executeUpdate("INSERT INTO items VALUES (000002, 'Kobe XI', 'NIKE KOBE', 'Basketball shoes', 'The last generation of Nike Kobe shoes', 'Yellow/Purple', 4.9, 10, 'Male', 8.5)");
 
-        stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (itemID int, itemPrice int, itemName varchar(100), itemBrand varchar(100), itemCategory varchar(100), itemDescription varchar(200), itemColor varchar(50), itemLove int, itemStock int, itemGender varchar(20), itemSize float, itemImg varchar(100))");
+        //stmt.executeUpdate("CREATE TABLE IF NOT EXISTS products (itemID int, itemPrice int, itemName varchar(100), itemBrand varchar(100), itemCategory varchar(100), itemDescription varchar(200), itemColor varchar(50), itemLove int, itemStock int, itemGender varchar(20), itemSize float, itemImg varchar(100))");
         // stmt.executeUpdate("INSERT INTO products VALUES (000005, 43,  'Ultra HD Invisible Cover Foundation', 'Make Up For Ever', 'Foundation', 'A bestselling HD foundation', 'Ivory', 3500, 25, 'Female', 1.0,'images/0005.jpg')");
         // stmt.executeUpdate("INSERT INTO products VALUES (000006, 38, 'Double Wear Stay in Foundation', 'Estee Lauder', 'Foundation', 'A 15 hour flawless foundation', 'Deep', 1500, 10, 'Female', 1.0, 'images/0006.jpg')");
 
