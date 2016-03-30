@@ -99,6 +99,8 @@ public class Main {
     //   }
     // }, new FreeMarkerEngine());
 
+    //get Items from Heroku database and render use teachers' template
+
     get("/skinstore/getItems", (req, res) -> {
       Connection connection = null;
       Map<String, Object> attributes = new HashMap<>();

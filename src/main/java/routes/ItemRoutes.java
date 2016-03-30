@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Date;
-
+import java.util.*;
 import spark.template.freemarker.FreeMarkerEngine;
 import spark.ModelAndView;
 import static spark.Spark.get;
@@ -53,6 +53,32 @@ public class ItemRoutes {
           if (connection != null) try{connection.close();} catch(SQLException e){}
         }
       }, new FreeMarkerEngine());
+
+      get("/skinstore/getItemsJson", (req, res) -> {
+        Connection connection = null;
+        Map<String, Object> attributes = new HashMap<>();
+        try {
+          connection = DatabaseUrl.extract().getConnection();
+          Statement stmt = connection.createStatement();
+          ResultSet rs = stmt.executeQuery("SELECT * FROM products");
+          ResultSetMetaData rsmd = rs.getMetaData();
+          int columnCount = rsmd.getColumnCount();
+          List<Object> output = new ArrayList<>();
+          while (rs.next()) {
+            Map<String, Object> aRow = new HashMap<>();
+            for(int i =1; i<= columnCount; i++){
+              aRow.put(rsmd.getColumnName(i), rs.getObject(i));
+            }
+            output.add(aRow);
+          }
+          return output;
+        } catch (Exception e) {
+          attributes.put("message", "There was an error: " + e);
+          return new ModelAndView(attributes, "error.ftl");
+        } finally {
+          if (connection != null) try{connection.close();} catch(SQLException e){}
+        }
+      }, gson::toJson);
 
 
         get("/api/slide15", (req, res) -> {
