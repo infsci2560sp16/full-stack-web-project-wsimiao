@@ -27,6 +27,7 @@ public class Main {
     staticFileLocation("/public");
 
     Object r = new ItemRoutes();
+    Object r2 = new ItemRender();
 
     //this is new added
     //new UserController(new UserService());

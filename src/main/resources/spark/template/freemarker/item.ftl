@@ -322,7 +322,7 @@
 
     <div class="item-image">
       <div class="item-image-container">
-        <img src="images/a.jpg" alt="">
+        <img src= ${item_img} alt="0001.jpg">
       </div>
     </div>
     <div class="item-detail">
