@@ -322,7 +322,7 @@
 
     <div class="item-image">
       <div class="item-image-container">
-        <img src= "./armani.jpg" alt="0001.jpg">
+        <img src= "images/armani1.jpg" alt="0001.jpg">
       </div>
     </div>
     <div class="item-detail">
