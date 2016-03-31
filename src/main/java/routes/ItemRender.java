@@ -33,12 +33,19 @@ public class ItemRender{
         return new ModelAndView(model,"item.ftl");
     }, new FreeMarkerEngine());
 
-    get("/skinstore/foundations", (request,response) -> {
-        ItemService itemService = new ItemService();
-        Map attributes = new HashMap<>();
-        attributes.put("allitems",itemService.getAllItems());
-        return new ModelAndView(attributes,"foundations.ftl");
-    }, new FreeMarkerEngine());
+    // get("/skinstore/foundations", (request,response) -> {
+    //     ItemService itemService = new ItemService();
+    //     Map attributes = new HashMap<>();
+    //     attributes.put("allitems",itemService.getAllItems());
+    //     return new ModelAndView(attributes,"foundations.ftl");
+    // }, new FreeMarkerEngine());
+
+    get("/skinstore/items",(request,response)->{
+        	ItemService itemService =  new ItemService();
+        	Map attributes = new HashMap<>();
+        	attributes.put("allitems", itemService.getAllItems());
+        	return new ModelAndView(attributes,"test.ftl");
+        }, new FreeMarkerEngine());
 
 
   }
