@@ -37,7 +37,7 @@
   <div class="nav-search">
     <div class="nav-search-container">
       <div class="logo">
-        <img src="images/logo.jpg" alt="" />
+        <img src="/images/logo.jpg" alt="" />
       </div>
       <div class="search">
 
@@ -322,7 +322,7 @@
 
     <div class="item-image">
       <div class="item-image-container">
-        <img src= "images/0001.jpg" alt="0001.jpg">
+        <img src= "/images/0001.jpg" alt="0001.jpg">
       </div>
     </div>
     <div class="item-detail">
