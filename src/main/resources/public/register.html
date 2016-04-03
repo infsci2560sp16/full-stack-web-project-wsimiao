@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/styletest.css" rel="stylesheet">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="js/addUser-ajax.js"></script>
-
-
+    <script type="text/javascript" src="js/serializeJSON.js"></script>
+	<script type="text/javascript" src="js/addUser-ajax.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 </head>
@@ -326,7 +325,7 @@
         <span class="regis-sub-title">Your Information</span>
         <span class="regis-sub-title" style="font-size:15px; margin:20px 0 20px 0">Just fill out the form below to save account information and speed up the checkout process</span>
           <div>
-          <form id="registration-form">
+          <form id="registration-form" >
             <table class="table-form">
               <tbody>
                 <tr id="firstrow">
@@ -334,7 +333,7 @@
                     <label for="registration-firstname">First Name</label>
                   </th>
                   <td>
-                    <input id="registration-firstname" type="text" value="">
+                    <input id="registration-firstname" type="text" value="" class = "required">
                   </td>
                   <td class="error-message" id="error-firstname">
                   </td>
@@ -344,7 +343,7 @@
                     <label for="registration-lastname">Last Name</label>
                   </th>
                   <td>
-                    <input id="registration-lastname" type="text" value="">
+                    <input id="registration-lastname" type="text" value="" class = "required">
                   </td>
                   <td class="error-message" id="error-lastname">
                   </td>
@@ -354,7 +353,7 @@
                     <label for="registration-email">Email</label>
                   </th>
                   <td>
-                    <input id="registration-email" type="email" value="">
+                    <input id="registration-email" value="" class = "required" type="text">
                   </td>
                   <td class="error-message" id="error-email">
                   </td>
@@ -364,7 +363,7 @@
                     <label for="registration-con-email">Confirm Email</label>
                   </th>
                   <td>
-                    <input id="registration-con-email" type="email" value="">
+                    <input id="registration-con-email"  value="" class = "required" type="text">
                   </td>
                   <td class="error-message" id="error-con-email">
                   </td>
@@ -374,7 +373,7 @@
                     <label for="registration-password">Password</label>
                   </th>
                   <td>
-                    <input id="registration-password" type="password" value="">
+                    <input id="registration-password" value="" class = "required" type="text">
                   </td>
                   <td class="error-message" id="error-pass">
                   </td>
@@ -384,7 +383,7 @@
                     <label for="registration-con-password">Confirm Password</label>
                   </th>
                   <td>
-                    <input id="registration-con-password" type="password" value="">
+                    <input id="registration-con-password"  value="" class = "required" type="text">
                   </td>
                   <td class="error-message" id="error-con-pass">
                   </td>
@@ -415,10 +414,10 @@
 </div>
 
 
-<!--
+<!--  
 <script type="text/javascript" src="js/formvalidation.js"></script>
-
 -->
+
 
 <!--
 <script>
