@@ -46,6 +46,26 @@ public class ItemRender{
         	attributes.put("allitems", itemService.getAllItems());
         	return new ModelAndView(attributes,"test.ftl");
         }, new FreeMarkerEngine());
+    
+
+    post("/skinstore/adduser",(request, response) -> {
+      
+      Connection connection = null;
+      //System.out.println(request.body());
+      
+        //connection = DatabaseUrl.extract().getConnection();
+        JSONObject obj = new JSONObject(request.body());
+        String firstName = obj.getString("firstName");
+        String lastName = obj.getString("lastName");
+        String email = obj.getString("email");
+        String password = obj.getString("password");
+        System.out.print("connected to server"+ email);
+        String suc = "Success";
+        
+      
+      return suc;
+      
+    }, gson::toJson);
 
 
   }
