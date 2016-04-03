@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/styletest.css" rel="stylesheet">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	  <script type="text/javascript" src="js/addUser-ajax.js"></script>
+	  <script type="text/javascript" src="js/addUser.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 </head>
@@ -324,7 +324,7 @@
         <span class="regis-sub-title">Your Information</span>
         <span class="regis-sub-title" style="font-size:15px; margin:20px 0 20px 0">Just fill out the form below to save account information and speed up the checkout process</span>
           <div>
-          <form id="registration-form" action="index.html" method ="POST">
+          <form id="registration-form" onsubmit="register(event)" >
             <table class="table-form">
               <tbody>
                 <tr id="firstrow">

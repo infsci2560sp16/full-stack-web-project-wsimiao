@@ -1,41 +1,32 @@
-$.ajaxSetup({
-    contentType: "application/json; charset=utf-8",
-    dataType: "json"
-});
+function register(e) {
+    e.preventDefault();
+    var firstName= document.getElementById('registration-firstname').value;
+    var lastName = document.getElementById('registration-lastname').value;
+    var email = document.getElementById('registration-email').value;
+    var password = document.getElementById('registration-password').value;
+    var data = {};
+    data.firstName = firstName;
+    data.lastName = lastName;
+    data.email = email;
+    data.password = password;
 
-$(document).ready(function(){
-    $('#registration-input').click(function() {
-        //Pull new data from form
-        var regisFirstName= document.getElementById('registration-firstname').value;
-        var regisLastName = document.getElementById('registration-lastname').value;
-        var regisEmail = document.getElementById('registration-email').value;
-        var regisEmailCon= document.getElementById('registration-con-email').value;
-        var regisPassword = document.getElementById('registration-password').value;
-        var regisPasswordCon = document.getElementById('registration-con-passwor').value;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "/skinstore/adduser", true);
+    xhttp.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+    xhttp.onreadystatechange = function() {
+       if (xhttp.readyState == 4 && xhttp.status == 200) {
+           // console.log(xhttp.responseText);
+           // alert(xhttp.responseText);
+           var textnode = document.createTextNode(xhttp.responseText);
+           // var node = document.getElementById("loginform");
+           // node.appendChild(textnode);
+           document.getElementById("registration-form").appendChild(textnode);
+           alert("Register Successful!");
+       }
+    };
+    //JSON.stringify turns a Javascript object into JSON text and stores that JSON text in a string.
+    //JSON.parse turns a string of JSON text into a Javascript object.
+    xhttp.send(JSON.stringify(data));
 
 
-        //Convert form data to JSON
-        var obj = $('#registration-form').serializeJSON();
-        var send = JSON.stringify(obj);
-
-        //output JSON for verification
-        console.log(send);
-
-        $.ajax({
-            //url: "http://localhost:5000/api/invadd",
-            url: 'https://radiant-waters-9673.herokuapp.com//skinstore/addUser',
-            type: "POST",
-            datatype: "json",
-            data: send,
-            error: function(xhr, error) {
-                   alert('Error!  Status = ' + xhr.status + ' Message = ' + error);
-            },
-            success: function(data) {
-                    alert("User added successfully.");
-                    window.location.href='/inventory-list.html';
-
-            }
-        });//end AJAX
-        return false;
-    });//end click function
-});//end ready function
+}
