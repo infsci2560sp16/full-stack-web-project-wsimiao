@@ -5,7 +5,7 @@ $.ajaxSetup({
 
 $(document).ready(function(){
     $('#registration-btn').click(function() {
-    	alert("trt");
+    	//alert("trt");
         //Pull new data from form
         var firstName = $("#registration-firstname").val();
         var lastName = $("#registration-lastname").val();
@@ -28,7 +28,8 @@ $(document).ready(function(){
 
         $.ajax({
             //url: "http://localhost:4567/skinstore/adduser",
-            url: 'https://radiant-waters-9673.herokuapp.com//skinstore/adduser',
+            url: "https://radiant-waters-9673.herokuapp.com/skinstore/adduser",
+
             type: "POST",
             datatype: "json",
             data: send,
