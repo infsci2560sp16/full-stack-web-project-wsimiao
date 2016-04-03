@@ -40,7 +40,7 @@ $(document).ready(function(){
             success: function(data) {
                     alert("User added successfully.");
                     alert(send);
-                    window.location.href='/index.html';
+                    window.location.href='https://radiant-waters-9673.herokuapp.com';
 
             }
         });//end AJAX
