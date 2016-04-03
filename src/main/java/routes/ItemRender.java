@@ -19,6 +19,8 @@ import static spark.Spark.*;
 public class ItemRender{
 
   Gson gson = new Gson();
+  UserService userService = new UserService();
+  List<User> userList = userService.getUsers();
 
   public ItemRender() {
       setupRoutes();
@@ -79,6 +81,28 @@ public class ItemRender{
       }
       
     });
+
+    post("/skinstore/loginuser", (request, response) -> {
+      String body = request.body();
+      JSONObject obj = new JSONObject(body);
+      String username = obj.getString("email");  //
+      String password = obj.getString("password");
+      String loginSuc = "You just log in Successfully";
+      String loginerr = "the password does not match";
+      String loginfind = "The user does not exist";
+      for(User user:userList){
+        if(user.getUserEmail().equals(username)){
+          if(user.getUserPass().equals(password)){
+            System.out.print("ok");
+            return loginSuc;
+          }else{
+            return loginerr;
+          }
+        }
+      }
+      return loginfind;   
+      
+    }, gson::toJson);
     
 
 

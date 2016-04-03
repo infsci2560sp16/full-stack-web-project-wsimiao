@@ -7,7 +7,7 @@ function login(e) {
     data.password = password;
 
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "https://radiant-waters-9673.herokuapp.com/skinstore/loginuser", true);
+    xhttp.open("POST", "/skinstore/loginuser", true);
     xhttp.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     xhttp.onreadystatechange = function() {
        if (xhttp.readyState == 4 && xhttp.status == 200) {
