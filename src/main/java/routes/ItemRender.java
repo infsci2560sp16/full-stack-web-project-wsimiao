@@ -2,15 +2,14 @@ package routes;
 
 import com.google.gson.Gson;
 import java.sql.*;
-import java.util.HashMap;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Date;
+
 import java.util.*;
 import spark.template.freemarker.FreeMarkerEngine;
 import spark.ModelAndView;
 import static spark.Spark.get;
 import skinstore.item.service.*;
+import skinstore.user.User;
+import skinstore.user.UserService;
 import com.heroku.sdk.jdbc.DatabaseUrl;
 import spark.Request;
 import org.json.*;
