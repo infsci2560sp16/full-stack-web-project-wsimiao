@@ -1,13 +1,12 @@
 <!doctype html>
 <html>
 <head>
-    <title>Registration</title>
+    <title>Log In</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/styletest.css" rel="stylesheet">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-	  <script type="text/javascript" src="js/addUser.js"></script>
+    <script type="text/javascript" src="js/loginUser.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 </head>
@@ -35,7 +34,7 @@
     </div>
 
   </div>
-<!--                -->
+<!--                 -->
   <div class="nav-search">
     <div class="nav-search-container">
       <div class="logo">
@@ -314,109 +313,35 @@
 </div><!--The end of Header-->
 
 <!--Start of Login Page-->
-<div class="regis-page">
-  <div class="regis-container">
-    <span id="regis-title">Account Registration</span>
-    <div class="regis-content">
+<div class="login-page">
+  <div class="login-container">
+    <span id="login-title">Sign In</span>
+    <div class="login-content">
 
-      <div class="regis-content-m">
+      <div class="login-content-l">
+        <span class="login-sub-title">Welcome Back!</span>
+        <form id="loginform" onsubmit="login(event)" >
+          Email Address:
+          <input type="email" name="email" id="email"><br>
+          Password:
+          <input type="password" name="password" id="password"><br>
+          <input type="submit">
+        </form>
 
-        <span class="regis-sub-title">Your Information</span>
-        <span class="regis-sub-title" style="font-size:15px; margin:20px 0 20px 0">Just fill out the form below to save account information and speed up the checkout process</span>
-          <div>
-          <form id="registration-form" onsubmit="register(event)" >
-            <table class="table-form">
-              <tbody>
-                <tr id="firstrow">
-                  <th scope="row">
-                    <label for="registration-firstname">First Name</label>
-                  </th>
-                  <td>
-                    <input id="registration-firstname" type="text" value="" class = "required">
-                  </td>
-                  <td class="error-message" id="error-firstname">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="registration-lastname">Last Name</label>
-                  </th>
-                  <td>
-                    <input id="registration-lastname" type="text" value="" class = "required">
-                  </td>
-                  <td class="error-message" id="error-lastname">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="registration-email">Email</label>
-                  </th>
-                  <td>
-                    <input id="registration-email" value="" class = "required" type="text">
-                  </td>
-                  <td class="error-message" id="error-email">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="registration-con-email">Confirm Email</label>
-                  </th>
-                  <td>
-                    <input id="registration-con-email"  value="" class = "required" type="text">
-                  </td>
-                  <td class="error-message" id="error-con-email">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="registration-password">Password</label>
-                  </th>
-                  <td>
-                    <input id="registration-password" value="" class = "required" type="text">
-                  </td>
-                  <td class="error-message" id="error-pass">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <label for="registration-con-password">Confirm Password</label>
-                  </th>
-                  <td>
-                    <input id="registration-con-password"  value="" class = "required" type="text">
-                  </td>
-                  <td class="error-message" id="error-con-pass">
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    &nbsp;
-                  </th>
-                  <td>
-                    <input id="registration-btn" type="submit" value="Register">
-                  </td>
-                  <td>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </form>
-          </div>
+      </div>
+      <div class="login-content-r">
+
+          <span class="login-sub-title">Why Register</span>
+          <a href="register.html" id="register-now-btn"> Register Now></a>
 
 
       </div>
-
 
 
     </div>
 
   </div>
 </div>
-
-
-<!--  
-<script type="text/javascript" src="js/formvalidation.js"></script>
--->
-
 
 </body>
 </html>
