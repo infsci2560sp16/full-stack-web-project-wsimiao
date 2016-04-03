@@ -48,13 +48,13 @@ public class ItemRender{
         	attributes.put("allitems", itemService.getAllItems());
         	return new ModelAndView(attributes,"test.ftl");
         }, new FreeMarkerEngine());
-    
+
 
     post("/skinstore/adduser",(request, response) -> {
       
       Connection connection = null;
       //System.out.println(request.body());
-      
+      try{
         //connection = DatabaseUrl.extract().getConnection();
         JSONObject obj = new JSONObject(request.body());
         String firstName = obj.getString("firstName");
@@ -63,11 +63,25 @@ public class ItemRender{
         String password = obj.getString("password");
         System.out.print("connected to server"+ email);
         String suc = "Success";
-        
+        connection = DatabaseUrl.extract().getConnection();
+            Statement stmt = connection.createStatement();
+            stmt.executeUpdate("CREATE TABLE IF NOT EXISTS users (firstname varchar(40), lastname varchar(40), email varchar(40), password varchar(40))");
+            stmt.executeUpdate("INSERT INTO users VALUES ('"+firstName+"', '"+lastName+"','"+email+"','"+password+"')");
+            //stmt.executeUpdate(""); 
+        return request.body();
       
-      return suc;
+      }catch(Exception e ){
+        response.status(500);
+        return e.getMessage();
+      }finally {
+        response.status(500);
+        if (connection != null) try{connection.close();} catch(SQLException e){}
+      }
       
-    }, gson::toJson);
+    });
+    
+
+
 
 
   }
