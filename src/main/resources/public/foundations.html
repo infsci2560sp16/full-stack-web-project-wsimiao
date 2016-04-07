@@ -14,13 +14,13 @@
 <script>
   function getJson(){
     $.ajax({
-      url : "skinstore/getItemsJson"
+      url : "/Jsons"
       success : function(result) {
         var items = JSON.parse(result);
         if (items.length > 0){
           for (var i = 0; i < items.length; i++){
             $("div.newItems").append(
-              '<p class = "foundations" >' + items[i].itemid + item[i].itemname +'</p>' + '<br/>'
+              '<p class = "foundations" >' + items[i].id + item[i].name +'</p>' + '<br/>'
 
               //'<p class="question" id="' + flowers[i].id + '">' + flowers[i].name + '</p>' + '<br/>'
             );
