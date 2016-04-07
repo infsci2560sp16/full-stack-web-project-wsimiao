@@ -1,7 +1,7 @@
 import static spark.Spark.*;
 import spark.ModelAndView;
 import spark.template.freemarker.FreeMarkerEngine;
-
+import spark.*;
 import java.sql.*;
 import java.util.*;
 import com.google.gson.Gson;
@@ -127,7 +127,15 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
+    get("/Jsons", new Route() {
+        @Override
+        public Object handle(Request request, Response response) {
+        	ItemService itemservice = new ItemService();
+          // process request
+          return new Gson().toJson(itemservice.getAllItems());
+        }
+      });
 
-  }
+
 
 }
