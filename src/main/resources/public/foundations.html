@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>Skin Store</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/styletest.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+<script>
+  function getJson(){
+    $.ajax({
+      url : "skinstore/getItemsJson"
+      success : function(result) {
+        var items = JSON.parse(result);
+        if (items.length > 0){
+          for (var i = 0; i < items.length; i++){
+            $("div.newItems").append(
+              '<p class = "foundations" >' + items[i].itemid + item[i].itemname +'</p>' + '<br/>'
+
+              //'<p class="question" id="' + flowers[i].id + '">' + flowers[i].name + '</p>' + '<br/>'
+            );
+          }
+        }
+      }
+    });
+  }
+</script>
+
+<div class="newItems">
+
+</div>
+
+
+</body>
+
+</html>
