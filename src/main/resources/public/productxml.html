@@ -25,6 +25,15 @@
     <tbody>
     </tbody>
   </table>
+  <div class="itemsxml">
+  </div>
+
+  <script>
+    getDataXML();
+    $(document).ajaxStop(function() {
+    $('#item-table').DataTable()
+    });
+	</script>
 
 
 </body>
