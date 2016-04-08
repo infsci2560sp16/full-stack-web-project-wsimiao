@@ -14,7 +14,7 @@ function handleDataXML(data) {
     var itembrand = $(this).find('itembrand').text();
     var itemcategory = $(this).find('itemcategory').text();
     var itemcolor = $(this).find('itemcolor').text();
-    $(table).find(tbody).append('<td>' + itemid + '</td><td>' + itemname + '</td><td>' + itembrand + '</td><td>' + itemcategory + '</td><td>' + itemcolor + '</td>');
-
+    //$(table).find(tbody).append('<td>' + itemid + '</td><td>' + itemname + '</td><td>' + itembrand + '</td><td>' + itemcategory + '</td><td>' + itemcolor + '</td>');
+    $("div.itemsxml").append('<p> item name' + itemname + '</p>');
   });
 }
