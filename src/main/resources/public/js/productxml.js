@@ -5,9 +5,9 @@ $(function() {
     dataType : "XML",
 		success : handleDataXML
 });
-}
+});
 
-function handleDataXML(data) {
+function handleDataXML(data){
   $(data).find('Item').each(function(){
     var itemid = $(this).find('itemid').text();
     var itemname = $(this).find('itemname').text();
