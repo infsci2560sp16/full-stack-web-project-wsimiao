@@ -8,6 +8,7 @@
 // });
 
 function getDataXML(){
+  alert("hell1");
   $.ajax({
 		url : "https://radiant-waters-9673.herokuapp.com/skinstore/getItemsXML",
     type : "get",
@@ -17,6 +18,7 @@ function getDataXML(){
 }
 
 function handleDataXML(data){
+  alert("hell2");
   $(data).find('Item').each(function(){
     var itemid = $(this).find('itemid').text();
     var itemprice = $(this).find('itemprice').text();
