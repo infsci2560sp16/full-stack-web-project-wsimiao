@@ -58,7 +58,7 @@ $(function() {
         var itemsize = $(this).find('itemsize').text();
         var itemimg = $(this).find('itemimg').text();
         $('<tr></tr>').html('<td>'+itemid+'</td><td>'+ itemprice + '</td><td>' +itemname+'</td><td>'+itembrand+'</td><td>'+ itemcategory +'</td><td>'+ itemdescription + '</td><td>'+ itemcolor +'</td><td>'+ itemlove +'</td><td>'+ itemstock +'</td><td>'+ itemgender +'</td><td>'+ itemsize +'</td><td>'+itemimg +'</td>').appendTo('#itemtable');
-      } // end of inner function
-		)};
+      }); // end of inner function
+		}
 	});
 });
