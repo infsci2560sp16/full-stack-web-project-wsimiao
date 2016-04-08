@@ -18,7 +18,7 @@
 <input type = "button" value = "Click and get Jsons" onclick = "getJson()">
 -->
 
-  <table id="item-table" >
+  <table id="itemtable" >
     <thead>
       <tr><th>item id</th><th>item price</th><th>item name</th><th>item brand</th><th>item category</th><th>item Description </th><th> item color</th><th> item love </th><th> item stock </th><th> item gender </th><th> item size </th><th> item img</tr>
     </thead>
@@ -31,7 +31,7 @@
   <script>
     getDataXML();
     $(document).ajaxStop(function() {
-    $('#item-table').DataTable()
+    $('#itemtable').DataTable()
     });
 	</script>
 

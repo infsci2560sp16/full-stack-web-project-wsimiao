@@ -34,6 +34,6 @@ function handleDataXML(data){
     var itemimg = $(this).find('itemimg').text();
     //$(table).find(tbody).append('<td>' + itemid + '</td><td>' + itemname + '</td><td>' + itembrand + '</td><td>' + itemcategory + '</td><td>' + itemcolor + '</td>');
     //$("div.itemsxml").append('<p> item name' + itemname + '</p>');
-     $('<tr></tr>').html('<td>'+itemid+'</td><td>'+ itemprice + '</td><td>' +itemname+'</td><td>'+itembrand+'</td><td>'+ itemcategory +'</td><td>'+ itemdescription + '</td><td>'+ itemcolor +'</td><td>'+ itemlove +'</td><td>'+ itemstock +'</td><td>'+ itemgender +'</td><td>'+ itemsize +'</td><td>'+itemimg +'</td>').appendTo('#item-table');
+     $('<tr></tr>').html('<td>'+itemid+'</td><td>'+ itemprice + '</td><td>' +itemname+'</td><td>'+itembrand+'</td><td>'+ itemcategory +'</td><td>'+ itemdescription + '</td><td>'+ itemcolor +'</td><td>'+ itemlove +'</td><td>'+ itemstock +'</td><td>'+ itemgender +'</td><td>'+ itemsize +'</td><td>'+itemimg +'</td>').appendTo('#itemtable');
   });
 }
