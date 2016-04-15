@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="http://lit-cove-9272.herokuapp.com/schema/productinfo"
+           targetNamespace="http://radiant-waters-9673.herokuapp.com/skinstore/getItemsXML"
            elementForDefault="qualified">
     <xs:element name="Results">
         <xs:complexType>
@@ -44,7 +44,7 @@
                         <xs:element name="itemdescription">
                             <xs:simpleType>
                                 <xs:restriction base="xs:string">
-                                    <xs:maxLength value = "200" />
+                                    <xs:maxLength value = "1000" />
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:element>
@@ -55,25 +55,32 @@
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:element>
+                        <xs:element name="itemstock">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:integer">
+                                    <xs:minInclusive value="0" />
+                                    <xs:maxInclusive value="100000" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
                         <xs:element name="itemlove">
                             <xs:simpleType>
                                 <xs:restriction base="xs:integer">
-                                    <xs:minInclusive value="0.0" />
-                                    <xs:maxInclusive value="5.0" />
+                                    <xs:minInclusive value="0" />
+                                    <xs:maxInclusive value="100000" />
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:element>
                         <xs:element name="itemgender">
                             <xs:simpleType>]
                                 <xs:restriction base="xs:string">
-                                    <xs:minInclusive value="0" />
+                                    <xs:maxLength value="20" />
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:element>
                         <xs:element name="itemsize">
                             <xs:simpleType>
                                 <xs:resctriction base="xs:decimal">
-                                    <xs:maxLength value = "20" />
                                 </xs:resctriction>
                             </xs:simpleType>
                         </xs:element>
